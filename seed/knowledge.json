@@ -1,0 +1,4453 @@
+[
+  {
+    "position_code": "java_backend",
+    "title": "Spring IoC 核心概念",
+    "content": "IoC（控制反转）将对象的创建与依赖注入交给 Spring 容器管理，常用注解 @Autowired、@Component。",
+    "tags": "Spring,IoC,依赖注入"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "HTTP 状态码",
+    "content": "200 成功，301/302 重定向，404 未找到，500 服务器错误。",
+    "tags": "HTTP,状态码"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "请简述 Spring 的 IoC 与 AOP。请从概念与使用场景简要说明。",
+    "content": "IoC 控制反转，将对象创建与依赖交给容器；AOP 面向切面，用于解耦横切关注点。",
+    "tags": "Java,Spring",
+    "difficulty": 2,
+    "source": "question_reference",
+    "topic": "Java",
+    "keywords": "Java,Spring,请简述,IoC,AOP,请从概念与使用场,景简要说明,控制反转"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何设计一个高并发的秒杀接口？从缓存、限流、数据库等角度说明。",
+    "content": "缓存预热、限流（令牌桶/滑动窗口）、异步下单、数据库分库分表等。",
+    "tags": "并发,Redis",
+    "difficulty": 4,
+    "source": "question_reference",
+    "topic": "并发",
+    "keywords": "并发,Redis,如何设计一个高并,发的秒杀接口,从缓存,限流,数据库等角度说明,缓存预热"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "简述 HTTP 与 HTTPS 的区别。从协议与安全角度说明。",
+    "content": "HTTPS 在 HTTP 基础上加入 TLS/SSL 加密，保证机密性与完整性。",
+    "tags": "HTTP,安全",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "HTTP",
+    "keywords": "HTTP,安全,简述,HTTPS,的区别,从协议与安全角度,基础上加入,TLS/SSL"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是JVM？",
+    "content": "Java Virtual Machine 是运行Java字节码的虚拟机，负责内存管理、垃圾回收和运行时环境。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,JVM,Java,Virtual,Machine,是运行,字节码的虚拟机"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "JDK和JRE的区别是什么？",
+    "content": "JDK包含开发工具和JRE；JRE只包含运行Java程序所需环境。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,JDK,JRE,的区别是什么,包含开发工具和,只包含运行,Java,程序所需环境"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "Java中的基本数据类型有哪些？",
+    "content": "byte short int long float double char boolean。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,Java,中的基本数据类型,有哪些,byte,short,int,long"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "String为什么是不可变的？",
+    "content": "String使用final修饰字符数组且没有提供修改方法，保证线程安全和缓存优化。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,String,为什么是不可变的,final,修饰字符数组且没,有提供修改方法,保证线程安全和缓,存优化"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "==和equals的区别是什么？",
+    "content": "==比较地址；equals默认比较地址但通常被重写用于比较内容。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,equals,的区别是什么,比较地址,默认比较地址但通,常被重写用于比较,内容"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "ArrayList和LinkedList的区别？",
+    "content": "ArrayList基于数组适合随机访问；LinkedList基于链表适合插入删除。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,ArrayList,LinkedList,的区别,基于数组适合随机,访问,基于链表适合插入,删除"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "HashMap的底层结构是什么？",
+    "content": "JDK1.8后为数组+链表+红黑树结构。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,HashMap,的底层结构是什么,JDK1.8,后为数组,链表,红黑树结构"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "HashMap为什么线程不安全？",
+    "content": "多线程put时可能出现数据覆盖或死循环。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,HashMap,为什么线程不安全,多线程,put,时可能出现数据覆,盖或死循环"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "ConcurrentHashMap如何保证线程安全？",
+    "content": "采用分段锁或CAS+synchronized机制提高并发性能。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,ConcurrentHashMap,如何保证线程安全,采用分段锁或,CAS+synchronized,机制提高并发性能"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是反射？",
+    "content": "反射是在运行时动态获取类信息并操作对象的机制。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是反射,反射是在运行时动,态获取类信息并操,作对象的机制"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "Java中异常体系结构是什么？",
+    "content": "Throwable下分为Error和Exception，Exception又分为运行时和非运行时异常。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,Java,中异常体系结构是,什么,Throwable,下分为,Error,Exception"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是多态？",
+    "content": "同一接口不同实现，在运行时决定具体行为。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是多态,同一接口不同实现,在运行时决定具体,行为"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是依赖注入？",
+    "content": "对象依赖由容器创建并注入，而不是自己创建。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是依赖注入,对象依赖由容器创,建并注入,而不是自己创建"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "Spring IOC是什么？",
+    "content": "控制反转，由Spring容器管理对象生命周期和依赖关系。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,Spring,IOC,是什么,控制反转,容器管理对象生命,周期和依赖关系"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "Spring AOP是什么？",
+    "content": "面向切面编程，用于日志、事务等横切逻辑。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,Spring,AOP,是什么,面向切面编程,用于日志,事务等横切逻辑"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "Spring Bean的作用域有哪些？",
+    "content": "singleton prototype request session application。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,Spring,Bean,的作用域有哪些,singleton,prototype,request,session"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "@Autowired和@Resource的区别？",
+    "content": "@Autowired按类型注入，@Resource按名称优先。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,Autowired,Resource,的区别,按类型注入,按名称优先"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "Spring事务传播行为有哪些？",
+    "content": "REQUIRED REQUIRES_NEW SUPPORTS 等。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,Spring,事务传播行为有哪,REQUIRED,REQUIRES_NEW,SUPPORTS"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是RESTful API？",
+    "content": "一种基于HTTP的资源风格API设计规范。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,RESTful,API,一种基于,HTTP,的资源风格,设计规范"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "HTTP常见状态码有哪些？",
+    "content": "200成功 404未找到 500服务器错误 403禁止访问。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,HTTP,常见状态码有哪些,成功,未找到,服务器错误,禁止访问"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是微服务架构？",
+    "content": "将系统拆分为多个独立服务进行开发部署。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是微服务架构,将系统拆分为多个,独立服务进行开发,部署"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "Spring Boot的优点是什么？",
+    "content": "自动配置、快速开发、减少XML配置。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,Spring,Boot,的优点是什么,自动配置,快速开发,减少,XML"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "Spring Boot自动配置原理是什么？",
+    "content": "基于@EnableAutoConfiguration和条件注解实现。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,Spring,Boot,自动配置原理是什,基于,EnableAutoConfigurati,on,和条件注解实现"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是MyBatis？",
+    "content": "一种持久层框架，用于简化数据库操作。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,MyBatis,一种持久层框架,用于简化数据库操"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "MyBatis中#{}和${}区别？",
+    "content": "#{}预编译防止SQL注入，${}字符串拼接。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,MyBatis,区别,预编译防止,SQL,注入,字符串拼接"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是SQL注入？",
+    "content": "通过恶意SQL语句操控数据库查询的攻击方式。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,SQL,注入,通过恶意,语句操控数据库查,询的攻击方式"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "数据库索引的作用是什么？",
+    "content": "提高查询效率。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,数据库索引的作用,是什么,提高查询效率"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "B+树为什么适合做数据库索引？",
+    "content": "减少磁盘IO，提高查询效率。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,B+,树为什么适合做数,据库索引,减少磁盘,IO,提高查询效率"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "事务的ACID特性是什么？",
+    "content": "原子性 一致性 隔离性 持久性。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,事务的,ACID,特性是什么,原子性,一致性,隔离性,持久性"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "数据库隔离级别有哪些？",
+    "content": "读未提交 读已提交 可重复读 串行化。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,数据库隔离级别有,哪些,读未提交,读已提交,可重复读,串行化"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是脏读？",
+    "content": "读取到未提交事务的数据。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是脏读,读取到未提交事务,的数据"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是幻读？",
+    "content": "同一查询条件多次查询结果数量不同。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是幻读,同一查询条件多次,查询结果数量不同"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "Redis是什么？",
+    "content": "基于内存的键值数据库。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,Redis,是什么,基于内存的键值数,据库"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "Redis常见数据结构有哪些？",
+    "content": "String Hash List Set ZSet。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,Redis,常见数据结构有哪,String,Hash,List,Set,ZSet"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "Redis为什么快？",
+    "content": "基于内存 单线程 IO多路复用。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,Redis,为什么快,基于内存,单线程,IO,多路复用"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "Redis持久化方式有哪些？",
+    "content": "RDB和AOF。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,Redis,持久化方式有哪些,RDB,AOF"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是缓存穿透？",
+    "content": "查询不存在数据导致请求直接打到数据库。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是缓存穿透,查询不存在数据导,致请求直接打到数,据库"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是缓存击穿？",
+    "content": "热点key失效瞬间大量请求打到数据库。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是缓存击穿,热点,key,失效瞬间大量请求,打到数据库"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是缓存雪崩？",
+    "content": "大量缓存同时失效导致系统压力骤增。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是缓存雪崩,大量缓存同时失效,导致系统压力骤增"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何解决缓存穿透？",
+    "content": "布隆过滤器或缓存空值。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,如何解决缓存穿透,布隆过滤器或缓存,空值"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是消息队列？",
+    "content": "用于系统异步解耦和削峰填谷的组件。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是消息队列,用于系统异步解耦,和削峰填谷的组件"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "常见消息队列有哪些？",
+    "content": "Kafka RabbitMQ RocketMQ。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,常见消息队列有哪,Kafka,RabbitMQ,RocketMQ"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是幂等性？",
+    "content": "多次执行同一操作结果一致。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是幂等性,多次执行同一操作,结果一致"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何实现接口幂等？",
+    "content": "唯一ID token 或数据库唯一索引。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,如何实现接口幂等,唯一,ID,token,或数据库唯一索引"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是分布式锁？",
+    "content": "在分布式系统中控制共享资源访问。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是分布式锁,在分布式系统中控,制共享资源访问"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "Redis如何实现分布式锁？",
+    "content": "SETNX+过期时间或Redisson。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,Redis,如何实现分布式锁,SETNX+,过期时间或,Redisson"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是线程池？",
+    "content": "用于管理线程复用的机制。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是线程池,用于管理线程复用,的机制"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "Java常见线程池有哪些？",
+    "content": "FixedThreadPool CachedThreadPool SingleThreadExecutor。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,Java,常见线程池有哪些,FixedThreadPool,CachedThreadPool,SingleThreadExecutor"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "Thread和Runnable区别？",
+    "content": "Thread是类 Runnable是接口更灵活。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,Thread,Runnable,区别,是类,是接口更灵活"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "synchronized和Lock区别？",
+    "content": "Lock更灵活支持公平锁和可中断锁。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,synchronized,Lock,区别,更灵活支持公平锁,和可中断锁"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "介绍一下你做过的项目架构",
+    "content": "描述系统结构 技术栈 模块划分。",
+    "tags": "项目实践",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "项目实践",
+    "keywords": "项目实践,介绍一下你做过的,项目架构,描述系统结构,技术栈,模块划分",
+    "legacy_title": "介绍一下你做过的项目架构",
+    "legacy_titles": [
+      "介绍一下你做过的项目架构，请重点说明你的职责、方案取舍、结果和复盘。"
+    ]
+  },
+  {
+    "position_code": "java_backend",
+    "title": "项目中如何设计数据库表结构？",
+    "content": "根据业务模型设计并进行范式优化。",
+    "tags": "项目实践",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "项目实践",
+    "keywords": "项目实践,项目中如何设计数,据库表结构,根据业务模型设计,并进行范式优化"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "项目中如何做接口性能优化？",
+    "content": "使用缓存 索引 异步处理。",
+    "tags": "项目实践",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "项目实践",
+    "keywords": "项目实践,项目中如何做接口,性能优化,使用缓存,索引,异步处理"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "项目中遇到过性能瓶颈吗？如何解决？",
+    "content": "通过SQL优化和缓存提升性能。",
+    "tags": "项目实践",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "项目实践",
+    "keywords": "项目实践,项目中遇到过性能,瓶颈吗,如何解决,通过,SQL,优化和缓存提升性"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "项目如何处理高并发？",
+    "content": "缓存 限流 队列 分库分表。",
+    "tags": "项目实践",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "项目实践",
+    "keywords": "项目实践,项目如何处理高并,缓存,限流,队列,分库分表"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "你在项目中的职责是什么？",
+    "content": "描述负责模块与核心功能。",
+    "tags": "项目实践",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "项目实践",
+    "keywords": "项目实践,你在项目中的职责,是什么,描述负责模块与核,心功能"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何保证系统高可用？",
+    "content": "多实例部署+负载均衡+监控。",
+    "tags": "项目实践",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "项目实践",
+    "keywords": "项目实践,如何保证系统高可,多实例部署,负载均衡,监控"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "项目中使用过哪些中间件？",
+    "content": "Redis MQ Nginx 等。",
+    "tags": "项目实践",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "项目实践",
+    "keywords": "项目实践,项目中使用过哪些,中间件,Redis,MQ,Nginx"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何进行日志管理？",
+    "content": "使用ELK或集中日志系统。",
+    "tags": "项目实践",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "项目实践",
+    "keywords": "项目实践,如何进行日志管理,ELK,或集中日志系统"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "项目上线流程是怎样的？",
+    "content": "代码审核 测试 CI/CD 发布。",
+    "tags": "项目实践",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "项目实践",
+    "keywords": "项目实践,项目上线流程是怎,样的,代码审核,测试,CI/CD,发布"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如果系统QPS突然暴增怎么办？",
+    "content": "限流+扩容+缓存。",
+    "tags": "场景设计",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "场景设计",
+    "keywords": "场景设计,如果系统,QPS,突然暴增怎么办,限流,扩容,缓存"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "数据库查询很慢如何排查？",
+    "content": "查看执行计划和索引。",
+    "tags": "场景设计",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "场景设计",
+    "keywords": "场景设计,数据库查询很慢如,何排查,查看执行计划和索"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何设计一个秒杀系统？",
+    "content": "限流+缓存+消息队列+库存预扣。",
+    "tags": "场景设计",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "场景设计",
+    "keywords": "场景设计,如何设计一个秒杀,系统,限流,缓存,消息队列,库存预扣"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何防止接口被恶意刷？",
+    "content": "验证码 限流 Token。",
+    "tags": "场景设计",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "场景设计",
+    "keywords": "场景设计,如何防止接口被恶,意刷,验证码,限流,Token"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何设计分布式ID？",
+    "content": "Snowflake算法。",
+    "tags": "场景设计",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "场景设计",
+    "keywords": "场景设计,如何设计分布式,ID,Snowflake,算法"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何实现接口限流？",
+    "content": "令牌桶或漏桶算法。",
+    "tags": "场景设计",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "场景设计",
+    "keywords": "场景设计,如何实现接口限流,令牌桶或漏桶算法"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何设计用户登录系统？",
+    "content": "JWT或Session+Redis。",
+    "tags": "场景设计",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "场景设计",
+    "keywords": "场景设计,如何设计用户登录,系统,JWT,Session+Redis"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "系统需要支持百万用户如何设计？",
+    "content": "微服务+分布式架构。",
+    "tags": "场景设计",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "场景设计",
+    "keywords": "场景设计,系统需要支持百万,用户如何设计,微服务,分布式架构"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "订单系统如何保证不重复下单？",
+    "content": "幂等控制+唯一索引。",
+    "tags": "场景设计",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "场景设计",
+    "keywords": "场景设计,订单系统如何保证,不重复下单,幂等控制,唯一索引"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何处理分布式事务？",
+    "content": "2PC TCC 或最终一致性。",
+    "tags": "场景设计",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "场景设计",
+    "keywords": "场景设计,如何处理分布式事,PC,TCC,或最终一致性"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "团队出现技术分歧时你怎么处理？",
+    "content": "通过讨论和技术验证达成共识。",
+    "tags": "行为能力",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "行为能力",
+    "keywords": "行为能力,团队出现技术分歧,时你怎么处理,通过讨论和技术验,证达成共识"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何处理紧急线上故障？",
+    "content": "快速定位 回滚 修复。",
+    "tags": "行为能力",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何处理紧急线上,故障,快速定位,回滚,修复"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何提升团队开发效率？",
+    "content": "规范流程 自动化工具。",
+    "tags": "行为能力",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何提升团队开发,效率,规范流程,自动化工具"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何学习新技术？",
+    "content": "阅读文档 实践项目。",
+    "tags": "行为能力",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何学习新技术,阅读文档,实践项目"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "遇到难以解决的Bug怎么办？",
+    "content": "查日志 调试 搜索资料。",
+    "tags": "行为能力",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "行为能力",
+    "keywords": "行为能力,遇到难以解决的,Bug,怎么办,查日志,调试,搜索资料"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何进行代码评审？",
+    "content": "检查逻辑 性能 安全。",
+    "tags": "行为能力",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何进行代码评审,检查逻辑,性能,安全"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何保证代码质量？",
+    "content": "单元测试+代码规范。",
+    "tags": "行为能力",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何保证代码质量,单元测试,代码规范"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何管理技术债务？",
+    "content": "重构和技术规划。",
+    "tags": "行为能力",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何管理技术债务,重构和技术规划"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何提高系统稳定性？",
+    "content": "监控+报警+容灾。",
+    "tags": "行为能力",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何提高系统稳定,监控,报警,容灾"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何进行技术选型？",
+    "content": "根据业务需求和团队能力。",
+    "tags": "行为能力",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何进行技术选型,根据业务需求和团,队能力"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是GC？",
+    "content": "垃圾回收机制用于释放无用对象内存。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,GC,垃圾回收机制用于,释放无用对象内存"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "常见GC算法有哪些？",
+    "content": "标记清除 复制 标记整理。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,常见,GC,算法有哪些,标记清除,复制,标记整理"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是类加载机制？",
+    "content": "Java运行时加载类的过程。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是类加载机制,Java,运行时加载类的过"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "双亲委派模型是什么？",
+    "content": "类加载优先由父加载器完成。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,双亲委派模型是什,类加载优先由父加,载器完成"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是Netty？",
+    "content": "高性能NIO网络框架。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,Netty,高性能,NIO,网络框架"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是NIO？",
+    "content": "非阻塞IO模型。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,NIO,非阻塞,IO,模型"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是BIO？",
+    "content": "阻塞式IO模型。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,BIO,阻塞式,IO,模型"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是AOP应用场景？",
+    "content": "日志 权限 事务。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,AOP,应用场景,日志,权限,事务"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是JWT？",
+    "content": "用于身份认证的Token机制。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,JWT,用于身份认证的,Token,机制"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是OAuth2？",
+    "content": "授权框架。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,OAuth2,授权框架"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何实现文件上传服务？",
+    "content": "使用MultipartFile处理上传。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,如何实现文件上传,服务,MultipartFile,处理上传"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何实现文件下载？",
+    "content": "通过HTTP响应流返回文件。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,如何实现文件下载,通过,HTTP,响应流返回文件"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是分库分表？",
+    "content": "将数据拆分到多个数据库或表。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是分库分表,将数据拆分到多个,数据库或表"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "分库分表常见策略有哪些？",
+    "content": "按用户ID或时间分片。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,分库分表常见策略,有哪些,按用户,ID,或时间分片"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是服务注册与发现？",
+    "content": "服务自动注册并被其他服务发现。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是服务注册与,发现,服务自动注册并被,其他服务发现"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "常见注册中心有哪些？",
+    "content": "Nacos Eureka Consul。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,常见注册中心有哪,Nacos,Eureka,Consul"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是API网关？",
+    "content": "统一入口进行路由和鉴权。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,API,网关,统一入口进行路由,和鉴权"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是CI/CD？",
+    "content": "持续集成与持续部署流程。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,CI/CD,持续集成与持续部,署流程"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "如何设计权限系统？",
+    "content": "RBAC角色权限模型。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,如何设计权限系统,RBAC,角色权限模型"
+  },
+  {
+    "position_code": "java_backend",
+    "title": "什么是灰度发布？",
+    "content": "逐步向部分用户发布新版本。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是灰度发布,逐步向部分用户发,布新版本"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是HTML？",
+    "content": "HTML是用于构建网页结构的标记语言。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,HTML,是用于构建网页结,构的标记语言"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "HTML语义化标签有哪些？",
+    "content": "header nav article section footer 等。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,HTML,语义化标签有哪些,header,nav,article,section,footer"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "div和span有什么区别？",
+    "content": "div是块级元素 span是行内元素。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,div,span,有什么区别,是块级元素,是行内元素"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "HTML5新增了哪些特性？",
+    "content": "语义标签 本地存储 音视频 Canvas 等。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,HTML5,新增了哪些特性,语义标签,本地存储,音视频,Canvas"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是CSS？",
+    "content": "CSS用于控制网页样式和布局。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,CSS,用于控制网页样式,和布局"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "盒模型是什么？",
+    "content": "content padding border margin 组成。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,盒模型是什么,content,padding,border,margin,组成"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "标准盒模型和IE盒模型区别？",
+    "content": "width是否包含padding和border不同。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,标准盒模型和,IE,盒模型区别,width,是否包含,padding,border"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "display有哪些常见值？",
+    "content": "block inline inline-block none flex grid。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,display,有哪些常见值,block,inline,inline-block,none,flex"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "position属性有哪些？",
+    "content": "static relative absolute fixed sticky。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,position,属性有哪些,static,relative,absolute,fixed,sticky"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "flex布局是什么？",
+    "content": "一种一维布局方式用于灵活排列元素。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,flex,布局是什么,一种一维布局方式,用于灵活排列元素"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "grid布局是什么？",
+    "content": "二维布局系统用于复杂页面布局。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,grid,布局是什么,二维布局系统用于,复杂页面布局"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何实现水平垂直居中？",
+    "content": "flex或transform等方法。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,如何实现水平垂直,居中,flex,transform,等方法"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是响应式设计？",
+    "content": "页面根据不同设备尺寸自适应布局。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是响应式设计,页面根据不同设备,尺寸自适应布局"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "媒体查询是什么？",
+    "content": "@media用于根据设备条件应用样式。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,媒体查询是什么,media,用于根据设备条件,应用样式"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "rem和px区别？",
+    "content": "rem相对于根元素字体大小 px是固定像素。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,rem,px,区别,相对于根元素字体,大小,是固定像素"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是JavaScript？",
+    "content": "用于网页交互的脚本语言。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,JavaScript,用于网页交互的脚,本语言"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "var let const区别？",
+    "content": "作用域和是否可修改不同。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,var,let,const,区别,作用域和是否可修,改不同"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是闭包？",
+    "content": "函数访问其外部作用域变量的能力。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是闭包,函数访问其外部作,用域变量的能力"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "this指向规则是什么？",
+    "content": "取决于调用方式。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,this,指向规则是什么,取决于调用方式"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "原型链是什么？",
+    "content": "对象通过prototype实现继承关系。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,原型链是什么,对象通过,prototype,实现继承关系"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是事件冒泡？",
+    "content": "事件从子元素向父元素传播。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是事件冒泡,事件从子元素向父,元素传播"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是事件捕获？",
+    "content": "事件从父元素向子元素传播。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是事件捕获,事件从父元素向子,元素传播"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "addEventListener第三个参数作用？",
+    "content": "控制捕获或冒泡阶段。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,addEventListener,第三个参数作用,控制捕获或冒泡阶"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是事件委托？",
+    "content": "利用事件冒泡统一绑定事件。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是事件委托,利用事件冒泡统一,绑定事件"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是DOM？",
+    "content": "Document Object Model 文档对象模型。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,DOM,Document,Object,Model,文档对象模型"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是BOM？",
+    "content": "Browser Object Model 浏览器对象模型。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,BOM,Browser,Object,Model,浏览器对象模型"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "localStorage和sessionStorage区别？",
+    "content": "生命周期和作用域不同。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,localStorage,sessionStorage,区别,生命周期和作用域,不同"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "cookie和localStorage区别？",
+    "content": "cookie会随请求发送 localStorage不会。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,cookie,localStorage,区别,会随请求发送,不会"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是AJAX？",
+    "content": "异步请求服务器数据技术。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,AJAX,异步请求服务器数,据技术"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "fetch和axios区别？",
+    "content": "axios功能更丰富支持拦截器。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,fetch,axios,区别,功能更丰富支持拦,截器"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是Promise？",
+    "content": "处理异步操作的对象。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,Promise,处理异步操作的对"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "Promise状态有哪些？",
+    "content": "pending fulfilled rejected。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,Promise,状态有哪些,pending,fulfilled,rejected"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "async和await作用？",
+    "content": "让异步代码写起来像同步。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,async,await,作用,让异步代码写起来,像同步"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是跨域？",
+    "content": "浏览器同源策略限制不同源请求。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是跨域,浏览器同源策略限,制不同源请求"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "解决跨域的方法有哪些？",
+    "content": "CORS JSONP 代理等。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,解决跨域的方法有,哪些,CORS,JSONP,代理等"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是模块化？",
+    "content": "将代码拆分为独立模块管理。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是模块化,将代码拆分为独立,模块管理"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "ES6模块如何导入导出？",
+    "content": "export 和 import。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,ES6,模块如何导入导出,export,import"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是Webpack？",
+    "content": "前端资源打包工具。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,Webpack,前端资源打包工具"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "Webpack作用是什么？",
+    "content": "打包 编译 优化资源。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,Webpack,作用是什么,打包,编译,优化资源"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是Babel？",
+    "content": "将ES6代码转译为ES5。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,Babel,ES6,代码转译为,ES5"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是Vue？",
+    "content": "渐进式前端框架。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,Vue,渐进式前端框架"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "Vue的核心思想是什么？",
+    "content": "数据驱动和组件化。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,Vue,的核心思想是什么,数据驱动和组件化"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "Vue生命周期有哪些？",
+    "content": "created mounted updated destroyed等。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,Vue,生命周期有哪些,created,mounted,updated,destroyed"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "v-if和v-show区别？",
+    "content": "v-if控制DOM v-show控制display。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,v-if,v-show,区别,控制,DOM,display"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "Vue组件通信方式有哪些？",
+    "content": "props emit eventBus vuex等。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,Vue,组件通信方式有哪,props,emit,eventBus,vuex"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是Vuex？",
+    "content": "Vue状态管理库。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,Vuex,Vue,状态管理库"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是React？",
+    "content": "用于构建用户界面的JavaScript库。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,React,用于构建用户界面,JavaScript"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "React组件分为哪两类？",
+    "content": "函数组件和类组件。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,React,组件分为哪两类,函数组件和类组件"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "React中的state是什么？",
+    "content": "组件内部状态数据。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,React,中的,state,是什么,组件内部状态数据"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "React中的props是什么？",
+    "content": "组件间传递数据的方式。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,React,中的,props,是什么,组件间传递数据的,方式"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是虚拟DOM？",
+    "content": "JS对象表示DOM结构提高性能。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是虚拟,DOM,JS,对象表示,结构提高性能"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "React生命周期有哪些？",
+    "content": "mount update unmount阶段方法。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,React,生命周期有哪些,mount,update,unmount,阶段方法"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "useState作用？",
+    "content": "在函数组件中管理状态。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,useState,作用,在函数组件中管理,状态"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "useEffect作用？",
+    "content": "处理副作用如请求数据。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,useEffect,作用,处理副作用如请求,数据"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是路由？",
+    "content": "根据URL加载不同页面组件。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是路由,根据,URL,加载不同页面组件"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "前端路由实现原理？",
+    "content": "hash或history API。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,前端路由实现原理,hash,history,API"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是SPA？",
+    "content": "单页应用程序。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,SPA,单页应用程序"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是SSR？",
+    "content": "服务器端渲染。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,SSR,服务器端渲染"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "SSR优点是什么？",
+    "content": "提升SEO和首屏加载速度。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,SSR,优点是什么,提升,SEO,和首屏加载速度"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是前端性能优化？",
+    "content": "提升页面加载和运行效率。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是前端性能优,提升页面加载和运,行效率"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何减少HTTP请求？",
+    "content": "合并资源 使用CDN等。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,如何减少,HTTP,请求,合并资源,CDN"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何优化图片加载？",
+    "content": "压缩图片 懒加载等。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,如何优化图片加载,压缩图片,懒加载等"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是懒加载？",
+    "content": "需要时再加载资源。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是懒加载,需要时再加载资源"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是节流？",
+    "content": "限制函数执行频率。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是节流,限制函数执行频率"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是防抖？",
+    "content": "延迟执行函数避免频繁触发。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是防抖,延迟执行函数避免,频繁触发"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是XSS攻击？",
+    "content": "恶意脚本注入攻击。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,XSS,攻击,恶意脚本注入攻击"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何防止XSS？",
+    "content": "转义输出 CSP等。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,如何防止,XSS,转义输出,CSP"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是CSRF攻击？",
+    "content": "跨站请求伪造攻击。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,CSRF,攻击,跨站请求伪造攻击"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何防止CSRF？",
+    "content": "token验证。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,如何防止,CSRF,token,验证"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "什么是HTTPS？",
+    "content": "HTTP的安全版本使用SSL/TLS。",
+    "tags": "技术基础",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,HTTPS,HTTP,的安全版本使用,SSL/TLS"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "介绍一下你做过的前端项目",
+    "content": "描述项目结构和技术栈。",
+    "tags": "项目实践",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "项目实践",
+    "keywords": "项目实践,介绍一下你做过的,前端项目,描述项目结构和技,术栈",
+    "legacy_title": "介绍一下你做过的前端项目",
+    "legacy_titles": [
+      "介绍一下你做过的前端项目，请重点说明你的职责、方案取舍、结果和复盘。"
+    ]
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "项目中如何进行组件设计？",
+    "content": "按功能拆分复用组件。",
+    "tags": "项目实践",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "项目实践",
+    "keywords": "项目实践,项目中如何进行组,件设计,按功能拆分复用组"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何进行前端性能优化？",
+    "content": "代码拆分 缓存优化等。",
+    "tags": "项目实践",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "项目实践",
+    "keywords": "项目实践,如何进行前端性能,优化,代码拆分,缓存优化等"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何管理项目状态？",
+    "content": "使用Vuex或Redux。",
+    "tags": "项目实践",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "项目实践",
+    "keywords": "项目实践,如何管理项目状态,Vuex,Redux"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何进行接口调试？",
+    "content": "使用Postman或浏览器工具。",
+    "tags": "项目实践",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "项目实践",
+    "keywords": "项目实践,如何进行接口调试,Postman,或浏览器工具"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何处理跨域问题？",
+    "content": "配置代理或CORS。",
+    "tags": "项目实践",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "项目实践",
+    "keywords": "项目实践,如何处理跨域问题,配置代理或,CORS"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何部署前端项目？",
+    "content": "打包后部署到Nginx或CDN。",
+    "tags": "项目实践",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "项目实践",
+    "keywords": "项目实践,如何部署前端项目,打包后部署到,Nginx,CDN"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何进行代码规范管理？",
+    "content": "使用ESLint等工具。",
+    "tags": "项目实践",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "项目实践",
+    "keywords": "项目实践,如何进行代码规范,管理,ESLint,等工具"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "团队如何进行前端协作？",
+    "content": "Git代码管理和规范流程。",
+    "tags": "项目实践",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "项目实践",
+    "keywords": "项目实践,团队如何进行前端,协作,Git,代码管理和规范流"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何进行版本控制？",
+    "content": "使用Git进行分支管理。",
+    "tags": "项目实践",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "项目实践",
+    "keywords": "项目实践,如何进行版本控制,Git,进行分支管理"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "页面加载很慢如何优化？",
+    "content": "资源压缩 CDN缓存等。",
+    "tags": "场景设计",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "场景设计",
+    "keywords": "场景设计,页面加载很慢如何,优化,资源压缩,CDN,缓存等"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何实现无限滚动列表？",
+    "content": "监听滚动加载数据。",
+    "tags": "场景设计",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "场景设计",
+    "keywords": "场景设计,如何实现无限滚动,列表,监听滚动加载数据"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何实现图片懒加载？",
+    "content": "IntersectionObserver或滚动监听。",
+    "tags": "场景设计",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "场景设计",
+    "keywords": "场景设计,如何实现图片懒加,IntersectionObserver,或滚动监听"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何设计一个表单验证系统？",
+    "content": "使用规则校验和组件封装。",
+    "tags": "场景设计",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "场景设计",
+    "keywords": "场景设计,如何设计一个表单,验证系统,使用规则校验和组,件封装"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何实现前端权限控制？",
+    "content": "路由守卫和角色判断。",
+    "tags": "场景设计",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "场景设计",
+    "keywords": "场景设计,如何实现前端权限,控制,路由守卫和角色判"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何实现大文件上传？",
+    "content": "分片上传和断点续传。",
+    "tags": "场景设计",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "场景设计",
+    "keywords": "场景设计,如何实现大文件上,分片上传和断点续"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何实现实时聊天？",
+    "content": "WebSocket通信。",
+    "tags": "场景设计",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "场景设计",
+    "keywords": "场景设计,如何实现实时聊天,WebSocket,通信"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何实现拖拽排序？",
+    "content": "HTML5 drag API或库实现。",
+    "tags": "场景设计",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "场景设计",
+    "keywords": "场景设计,如何实现拖拽排序,HTML5,drag,API,或库实现"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何实现搜索自动提示？",
+    "content": "输入监听+接口查询。",
+    "tags": "场景设计",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "场景设计",
+    "keywords": "场景设计,如何实现搜索自动,提示,输入监听,接口查询"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何实现暗黑模式？",
+    "content": "切换主题样式。",
+    "tags": "场景设计",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "场景设计",
+    "keywords": "场景设计,如何实现暗黑模式,切换主题样式"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "团队意见不一致怎么办？",
+    "content": "通过讨论和技术验证解决。",
+    "tags": "行为能力",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "行为能力",
+    "keywords": "行为能力,团队意见不一致怎,么办,通过讨论和技术验,证解决"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何处理项目延期？",
+    "content": "调整计划优先核心功能。",
+    "tags": "行为能力",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何处理项目延期,调整计划优先核心,功能"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何学习新前端技术？",
+    "content": "阅读文档和实践项目。",
+    "tags": "行为能力",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何学习新前端技,阅读文档和实践项"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "遇到复杂Bug如何解决？",
+    "content": "调试日志逐步排查。",
+    "tags": "行为能力",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "行为能力",
+    "keywords": "行为能力,遇到复杂,Bug,如何解决,调试日志逐步排查"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何提升代码质量？",
+    "content": "代码评审和测试。",
+    "tags": "行为能力",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何提升代码质量,代码评审和测试"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何进行时间管理？",
+    "content": "合理拆分任务优先级。",
+    "tags": "行为能力",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何进行时间管理,合理拆分任务优先"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何处理工作压力？",
+    "content": "合理安排任务和沟通。",
+    "tags": "行为能力",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何处理工作压力,合理安排任务和沟"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何提升团队协作？",
+    "content": "规范流程加强沟通。",
+    "tags": "行为能力",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何提升团队协作,规范流程加强沟通"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "如何进行技术分享？",
+    "content": "整理经验进行团队分享。",
+    "tags": "行为能力",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何进行技术分享,整理经验进行团队,分享"
+  },
+  {
+    "position_code": "web_frontend",
+    "title": "你的职业规划是什么？",
+    "content": "持续提升技术能力成为高级工程师。",
+    "tags": "行为能力",
+    "difficulty": 1,
+    "source": "question_reference",
+    "topic": "行为能力",
+    "keywords": "行为能力,你的职业规划是什,持续提升技术能力,成为高级工程师"
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "两数之和：给定数组和目标值返回两个数下标",
+    "content": "使用哈希表记录差值位置。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,两数之和,给定数组和目标值,返回两个数下标,使用哈希表记录差,值位置",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "两数之和：给定数组和目标值返回两个数下标",
+    "legacy_titles": [
+      "请使用 Python 解决“两数之和：给定数组和目标值返回两个数下标”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "判断一个字符串是否为回文字符串",
+    "content": "双指针从两端向中间比较。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,判断一个字符串是,否为回文字符串,双指针从两端向中,间比较",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "判断一个字符串是否为回文字符串",
+    "legacy_titles": [
+      "请使用 Python 解决“判断一个字符串是否为回文字符串”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "计算斐波那契数列第n项",
+    "content": "递归或动态规划实现。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,计算斐波那契数列,递归或动态规划实",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "计算斐波那契数列第n项",
+    "legacy_titles": [
+      "请使用 Python 解决“计算斐波那契数列第n项”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "数组中出现次数最多的元素",
+    "content": "使用哈希表统计频率。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,数组中出现次数最,多的元素,使用哈希表统计频",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "数组中出现次数最多的元素",
+    "legacy_titles": [
+      "请使用 Python 解决“数组中出现次数最多的元素”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "反转字符串",
+    "content": "使用切片或双指针交换。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,反转字符串,使用切片或双指针,交换",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "反转字符串",
+    "legacy_titles": [
+      "请使用 Python 解决“反转字符串”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "合并两个有序数组",
+    "content": "双指针遍历合并。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,合并两个有序数组,双指针遍历合并",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "合并两个有序数组",
+    "legacy_titles": [
+      "请使用 Python 解决“合并两个有序数组”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "找到数组中的最大子数组和",
+    "content": "使用Kadane算法。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,找到数组中的最大,子数组和,Kadane",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "找到数组中的最大子数组和",
+    "legacy_titles": [
+      "请使用 Python 解决“找到数组中的最大子数组和”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "删除数组中的重复元素",
+    "content": "使用集合或双指针。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,删除数组中的重复,元素,使用集合或双指针",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "删除数组中的重复元素",
+    "legacy_titles": [
+      "请使用 Python 解决“删除数组中的重复元素”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "判断两个字符串是否为字母异位词",
+    "content": "排序或哈希计数比较。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,判断两个字符串是,否为字母异位词,排序或哈希计数比",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "判断两个字符串是否为字母异位词",
+    "legacy_titles": [
+      "请使用 Python 解决“判断两个字符串是否为字母异位词”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "实现二分查找",
+    "content": "在有序数组中不断折半查找。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,实现二分查找,在有序数组中不断,折半查找",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "实现二分查找",
+    "legacy_titles": [
+      "请使用 Python 解决“实现二分查找”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "实现冒泡排序",
+    "content": "相邻元素比较交换。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,实现冒泡排序,相邻元素比较交换",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "实现冒泡排序",
+    "legacy_titles": [
+      "请使用 Python 解决“实现冒泡排序”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "实现选择排序",
+    "content": "每次选择最小元素交换。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,实现选择排序,每次选择最小元素,交换",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "实现选择排序",
+    "legacy_titles": [
+      "请使用 Python 解决“实现选择排序”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "实现插入排序",
+    "content": "逐步插入已排序序列。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,实现插入排序,逐步插入已排序序",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "实现插入排序",
+    "legacy_titles": [
+      "请使用 Python 解决“实现插入排序”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "实现快速排序",
+    "content": "分治+递归实现排序。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,实现快速排序,分治,递归实现排序",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "实现快速排序",
+    "legacy_titles": [
+      "请使用 Python 解决“实现快速排序”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "实现归并排序",
+    "content": "分治合并排序。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,实现归并排序,分治合并排序",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "实现归并排序",
+    "legacy_titles": [
+      "请使用 Python 解决“实现归并排序”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "找出数组中第k大的元素",
+    "content": "使用快速选择或堆。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,找出数组中第,大的元素,使用快速选择或堆",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "找出数组中第k大的元素",
+    "legacy_titles": [
+      "请使用 Python 解决“找出数组中第k大的元素”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "实现栈结构",
+    "content": "使用列表append和pop。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,实现栈结构,使用列表,append,pop",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "实现栈结构",
+    "legacy_titles": [
+      "请使用 Python 解决“实现栈结构”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "实现队列结构",
+    "content": "使用collections.deque。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,实现队列结构,collections.deque",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "实现队列结构",
+    "legacy_titles": [
+      "请使用 Python 解决“实现队列结构”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "判断括号是否有效",
+    "content": "使用栈匹配括号。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,判断括号是否有效,使用栈匹配括号",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "判断括号是否有效",
+    "legacy_titles": [
+      "请使用 Python 解决“判断括号是否有效”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "计算字符串中字符出现次数",
+    "content": "使用字典统计。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,计算字符串中字符,出现次数,使用字典统计",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "计算字符串中字符出现次数",
+    "legacy_titles": [
+      "请使用 Python 解决“计算字符串中字符出现次数”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "找出数组中的最小值",
+    "content": "遍历比较获得最小值。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,找出数组中的最小,遍历比较获得最小",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "找出数组中的最小值",
+    "legacy_titles": [
+      "请使用 Python 解决“找出数组中的最小值”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "查找数组中重复的数字",
+    "content": "使用集合检测重复。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,查找数组中重复的,数字,使用集合检测重复",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "查找数组中重复的数字",
+    "legacy_titles": [
+      "请使用 Python 解决“查找数组中重复的数字”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "判断链表是否有环",
+    "content": "使用快慢指针检测。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,判断链表是否有环,使用快慢指针检测",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "判断链表是否有环",
+    "legacy_titles": [
+      "请使用 Python 解决“判断链表是否有环”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "反转链表",
+    "content": "使用迭代或递归实现。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,反转链表,使用迭代或递归实",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "反转链表",
+    "legacy_titles": [
+      "请使用 Python 解决“反转链表”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "合并两个有序链表",
+    "content": "使用双指针合并。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,合并两个有序链表,使用双指针合并",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "合并两个有序链表",
+    "legacy_titles": [
+      "请使用 Python 解决“合并两个有序链表”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "找到链表中间节点",
+    "content": "使用快慢指针。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,找到链表中间节点,使用快慢指针",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "找到链表中间节点",
+    "legacy_titles": [
+      "请使用 Python 解决“找到链表中间节点”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "删除链表倒数第n个节点",
+    "content": "双指针方法实现。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,删除链表倒数第,个节点,双指针方法实现",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "删除链表倒数第n个节点",
+    "legacy_titles": [
+      "请使用 Python 解决“删除链表倒数第n个节点”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "实现LRU缓存",
+    "content": "使用OrderedDict或双向链表+哈希表。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,LRU,缓存,OrderedDict,或双向链表,哈希表",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "实现LRU缓存",
+    "legacy_titles": [
+      "请使用 Python 解决“实现LRU缓存”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "字符串最长无重复子串长度",
+    "content": "滑动窗口算法。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,字符串最长无重复,子串长度,滑动窗口算法",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "字符串最长无重复子串长度",
+    "legacy_titles": [
+      "请使用 Python 解决“字符串最长无重复子串长度”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "字符串转整数atoi",
+    "content": "逐字符解析并处理符号。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,字符串转整数,atoi,逐字符解析并处理,符号",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "字符串转整数atoi",
+    "legacy_titles": [
+      "请使用 Python 解决“字符串转整数atoi”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "判断整数是否为回文数",
+    "content": "反转数字比较。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,判断整数是否为回,文数,反转数字比较",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "判断整数是否为回文数",
+    "legacy_titles": [
+      "请使用 Python 解决“判断整数是否为回文数”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "求数组中两个数的最大差值",
+    "content": "遍历记录最小值和最大差值。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,求数组中两个数的,最大差值,遍历记录最小值和",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "求数组中两个数的最大差值",
+    "legacy_titles": [
+      "请使用 Python 解决“求数组中两个数的最大差值”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "计算数组所有元素乘积",
+    "content": "前缀和后缀乘积法。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,计算数组所有元素,乘积,前缀和后缀乘积法",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "计算数组所有元素乘积",
+    "legacy_titles": [
+      "请使用 Python 解决“计算数组所有元素乘积”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "实现堆排序",
+    "content": "使用堆结构排序。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,实现堆排序,使用堆结构排序",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "实现堆排序",
+    "legacy_titles": [
+      "请使用 Python 解决“实现堆排序”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "找出缺失的数字",
+    "content": "利用求和公式或异或。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,找出缺失的数字,利用求和公式或异",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "找出缺失的数字",
+    "legacy_titles": [
+      "请使用 Python 解决“找出缺失的数字”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "实现深度优先搜索DFS",
+    "content": "递归或栈实现。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,实现深度优先搜索,DFS,递归或栈实现",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "实现深度优先搜索DFS",
+    "legacy_titles": [
+      "请使用 Python 解决“实现深度优先搜索DFS”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "实现广度优先搜索BFS",
+    "content": "使用队列实现。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,实现广度优先搜索,BFS,使用队列实现",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "实现广度优先搜索BFS",
+    "legacy_titles": [
+      "请使用 Python 解决“实现广度优先搜索BFS”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "二叉树前序遍历",
+    "content": "递归或栈实现。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,二叉树前序遍历,递归或栈实现",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "二叉树前序遍历",
+    "legacy_titles": [
+      "请使用 Python 解决“二叉树前序遍历”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "二叉树中序遍历",
+    "content": "递归或栈实现。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,二叉树中序遍历,递归或栈实现",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "二叉树中序遍历",
+    "legacy_titles": [
+      "请使用 Python 解决“二叉树中序遍历”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "二叉树后序遍历",
+    "content": "递归实现。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,二叉树后序遍历,递归实现",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "二叉树后序遍历",
+    "legacy_titles": [
+      "请使用 Python 解决“二叉树后序遍历”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "二叉树层序遍历",
+    "content": "使用队列BFS实现。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,二叉树层序遍历,使用队列,BFS",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "二叉树层序遍历",
+    "legacy_titles": [
+      "请使用 Python 解决“二叉树层序遍历”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "求二叉树最大深度",
+    "content": "递归计算高度。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,求二叉树最大深度,递归计算高度",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "求二叉树最大深度",
+    "legacy_titles": [
+      "请使用 Python 解决“求二叉树最大深度”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "判断二叉树是否平衡",
+    "content": "递归计算高度差。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,判断二叉树是否平,递归计算高度差",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "判断二叉树是否平衡",
+    "legacy_titles": [
+      "请使用 Python 解决“判断二叉树是否平衡”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "判断二叉树是否对称",
+    "content": "递归比较左右子树。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,判断二叉树是否对,递归比较左右子树",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "判断二叉树是否对称",
+    "legacy_titles": [
+      "请使用 Python 解决“判断二叉树是否对称”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "寻找二叉树最近公共祖先",
+    "content": "递归搜索实现。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,寻找二叉树最近公,共祖先,递归搜索实现",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "寻找二叉树最近公共祖先",
+    "legacy_titles": [
+      "请使用 Python 解决“寻找二叉树最近公共祖先”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "实现二叉搜索树插入操作",
+    "content": "根据大小递归插入。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,实现二叉搜索树插,入操作,根据大小递归插入",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "实现二叉搜索树插入操作",
+    "legacy_titles": [
+      "请使用 Python 解决“实现二叉搜索树插入操作”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "判断是否为二叉搜索树",
+    "content": "中序遍历检查顺序。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,判断是否为二叉搜,索树,中序遍历检查顺序",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "判断是否为二叉搜索树",
+    "legacy_titles": [
+      "请使用 Python 解决“判断是否为二叉搜索树”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "求二叉树路径和",
+    "content": "递归遍历路径累加。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,求二叉树路径和,递归遍历路径累加",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "求二叉树路径和",
+    "legacy_titles": [
+      "请使用 Python 解决“求二叉树路径和”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "实现拓扑排序",
+    "content": "使用入度+队列算法。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,实现拓扑排序,使用入度,队列算法",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "实现拓扑排序",
+    "legacy_titles": [
+      "请使用 Python 解决“实现拓扑排序”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "最短路径Dijkstra算法",
+    "content": "使用优先队列实现。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,最短路径,Dijkstra,使用优先队列实现",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "最短路径Dijkstra算法",
+    "legacy_titles": [
+      "请使用 Python 解决“最短路径Dijkstra算法”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "求两个集合的交集",
+    "content": "使用set运算。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,求两个集合的交集,set,运算",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "求两个集合的交集",
+    "legacy_titles": [
+      "请使用 Python 解决“求两个集合的交集”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "求数组所有子集",
+    "content": "回溯算法生成。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,求数组所有子集,回溯算法生成",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "求数组所有子集",
+    "legacy_titles": [
+      "请使用 Python 解决“求数组所有子集”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "生成全排列",
+    "content": "回溯算法实现。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,生成全排列,回溯算法实现",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "生成全排列",
+    "legacy_titles": [
+      "请使用 Python 解决“生成全排列”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "解决N皇后问题",
+    "content": "回溯搜索。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,解决,皇后问题,回溯搜索",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "解决N皇后问题",
+    "legacy_titles": [
+      "请使用 Python 解决“解决N皇后问题”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "背包问题",
+    "content": "动态规划求解。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,背包问题,动态规划求解",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "背包问题",
+    "legacy_titles": [
+      "请使用 Python 解决“背包问题”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "最长公共子序列",
+    "content": "LCS动态规划算法。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,最长公共子序列,LCS,动态规划算法",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "最长公共子序列",
+    "legacy_titles": [
+      "请使用 Python 解决“最长公共子序列”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "最长递增子序列",
+    "content": "LIS动态规划或贪心算法。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,最长递增子序列,LIS,动态规划或贪心算",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "最长递增子序列",
+    "legacy_titles": [
+      "请使用 Python 解决“最长递增子序列”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "编辑距离问题",
+    "content": "动态规划算法。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,编辑距离问题,动态规划算法",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "编辑距离问题",
+    "legacy_titles": [
+      "请使用 Python 解决“编辑距离问题”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "零钱兑换问题",
+    "content": "动态规划求最少硬币数。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,零钱兑换问题,动态规划求最少硬,币数",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "零钱兑换问题",
+    "legacy_titles": [
+      "请使用 Python 解决“零钱兑换问题”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "爬楼梯问题",
+    "content": "动态规划或斐波那契。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,爬楼梯问题,动态规划或斐波那",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "爬楼梯问题",
+    "legacy_titles": [
+      "请使用 Python 解决“爬楼梯问题”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "生成括号组合",
+    "content": "回溯生成所有合法括号。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,生成括号组合,回溯生成所有合法,括号",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "生成括号组合",
+    "legacy_titles": [
+      "请使用 Python 解决“生成括号组合”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "岛屿数量问题",
+    "content": "DFS或BFS搜索。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,岛屿数量问题,DFS,BFS,搜索",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "岛屿数量问题",
+    "legacy_titles": [
+      "请使用 Python 解决“岛屿数量问题”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "矩阵旋转90度",
+    "content": "转置+翻转实现。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,矩阵旋转,转置,翻转实现",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "矩阵旋转90度",
+    "legacy_titles": [
+      "请使用 Python 解决“矩阵旋转90度”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "矩阵螺旋遍历",
+    "content": "按边界循环遍历。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,矩阵螺旋遍历,按边界循环遍历",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "矩阵螺旋遍历",
+    "legacy_titles": [
+      "请使用 Python 解决“矩阵螺旋遍历”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "寻找矩阵中的目标值",
+    "content": "从右上角开始查找。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,寻找矩阵中的目标,从右上角开始查找",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "寻找矩阵中的目标值",
+    "legacy_titles": [
+      "请使用 Python 解决“寻找矩阵中的目标值”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "滑动窗口最大值",
+    "content": "双端队列实现。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,滑动窗口最大值,双端队列实现",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "滑动窗口最大值",
+    "legacy_titles": [
+      "请使用 Python 解决“滑动窗口最大值”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "求数组最大连续乘积",
+    "content": "动态规划维护最大最小值。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,求数组最大连续乘,动态规划维护最大,最小值",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "求数组最大连续乘积",
+    "legacy_titles": [
+      "请使用 Python 解决“求数组最大连续乘积”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "字符串压缩算法",
+    "content": "统计连续字符次数。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,字符串压缩算法,统计连续字符次数",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "字符串压缩算法",
+    "legacy_titles": [
+      "请使用 Python 解决“字符串压缩算法”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "最长回文子串",
+    "content": "中心扩展或DP算法。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,最长回文子串,中心扩展或,DP",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "最长回文子串",
+    "legacy_titles": [
+      "请使用 Python 解决“最长回文子串”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "分割回文字符串",
+    "content": "回溯+动态规划。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,分割回文字符串,回溯,动态规划",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "分割回文字符串",
+    "legacy_titles": [
+      "请使用 Python 解决“分割回文字符串”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "实现Trie字典树",
+    "content": "节点保存字符路径。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,Trie,字典树,节点保存字符路径",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "实现Trie字典树",
+    "legacy_titles": [
+      "请使用 Python 解决“实现Trie字典树”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "实现并查集UnionFind",
+    "content": "路径压缩+按秩合并。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,实现并查集,UnionFind,路径压缩,按秩合并",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "实现并查集UnionFind",
+    "legacy_titles": [
+      "请使用 Python 解决“实现并查集UnionFind”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "最小生成树Kruskal算法",
+    "content": "排序边+并查集。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,最小生成树,Kruskal,排序边,并查集",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "最小生成树Kruskal算法",
+    "legacy_titles": [
+      "请使用 Python 解决“最小生成树Kruskal算法”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "最小生成树Prim算法",
+    "content": "贪心+优先队列。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,最小生成树,Prim,贪心,优先队列",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "最小生成树Prim算法",
+    "legacy_titles": [
+      "请使用 Python 解决“最小生成树Prim算法”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "字符串匹配KMP算法",
+    "content": "构建next数组匹配。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,字符串匹配,KMP,构建,next,数组匹配",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "字符串匹配KMP算法",
+    "legacy_titles": [
+      "请使用 Python 解决“字符串匹配KMP算法”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "n)",
+    "content": "快速幂算法。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,快速幂算法",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "n)",
+    "legacy_titles": [
+      "请使用 Python 解决“n)”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。",
+      "请使用 Python 解决“计算 x 的 n 次幂”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "判断数字是否为素数",
+    "content": "试除法判断。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,判断数字是否为素,试除法判断",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "判断数字是否为素数",
+    "legacy_titles": [
+      "请使用 Python 解决“判断数字是否为素数”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "求最大公约数GCD",
+    "content": "欧几里得算法。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,求最大公约数,GCD,欧几里得算法",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "求最大公约数GCD",
+    "legacy_titles": [
+      "请使用 Python 解决“求最大公约数GCD”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "求最小公倍数LCM",
+    "content": "利用GCD计算。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,求最小公倍数,LCM,利用,GCD,计算",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "求最小公倍数LCM",
+    "legacy_titles": [
+      "请使用 Python 解决“求最小公倍数LCM”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "实现随机洗牌算法",
+    "content": "Fisher-Yates洗牌算法。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,实现随机洗牌算法,Fisher-Yates,洗牌算法",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "实现随机洗牌算法",
+    "legacy_titles": [
+      "请使用 Python 解决“实现随机洗牌算法”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "寻找数组中重复数字",
+    "content": "快慢指针或哈希表。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,寻找数组中重复数,快慢指针或哈希表",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "寻找数组中重复数字",
+    "legacy_titles": [
+      "请使用 Python 解决“寻找数组中重复数字”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "字符串反转单词顺序",
+    "content": "split和reverse实现。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,字符串反转单词顺,split,reverse",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "字符串反转单词顺序",
+    "legacy_titles": [
+      "请使用 Python 解决“字符串反转单词顺序”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "查找数组中连续最长序列",
+    "content": "使用哈希集合。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,查找数组中连续最,长序列,使用哈希集合",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "查找数组中连续最长序列",
+    "legacy_titles": [
+      "请使用 Python 解决“查找数组中连续最长序列”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "计算数组前k个高频元素",
+    "content": "使用堆或桶排序。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,计算数组前,个高频元素,使用堆或桶排序",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "计算数组前k个高频元素",
+    "legacy_titles": [
+      "请使用 Python 解决“计算数组前k个高频元素”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "求两个数组交集",
+    "content": "使用集合运算。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,求两个数组交集,使用集合运算",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "求两个数组交集",
+    "legacy_titles": [
+      "请使用 Python 解决“求两个数组交集”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "矩阵中最长递增路径",
+    "content": "DFS+记忆化搜索。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,矩阵中最长递增路,DFS+,记忆化搜索",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "矩阵中最长递增路径",
+    "legacy_titles": [
+      "请使用 Python 解决“矩阵中最长递增路径”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "实现LRU缓存结构",
+    "content": "哈希表+双向链表。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,LRU,缓存结构,哈希表,双向链表",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "实现LRU缓存结构",
+    "legacy_titles": [
+      "请使用 Python 解决“实现LRU缓存结构”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "实现LFU缓存结构",
+    "content": "哈希表+频率表。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,LFU,缓存结构,哈希表,频率表",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "实现LFU缓存结构",
+    "legacy_titles": [
+      "请使用 Python 解决“实现LFU缓存结构”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "判断图是否有环",
+    "content": "DFS检测环。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,判断图是否有环,DFS,检测环",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "判断图是否有环",
+    "legacy_titles": [
+      "请使用 Python 解决“判断图是否有环”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "最短编辑路径问题",
+    "content": "动态规划实现。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,最短编辑路径问题,动态规划实现",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "最短编辑路径问题",
+    "legacy_titles": [
+      "请使用 Python 解决“最短编辑路径问题”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "字符串解码问题",
+    "content": "栈结构解析字符串。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,字符串解码问题,栈结构解析字符串",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "字符串解码问题",
+    "legacy_titles": [
+      "请使用 Python 解决“字符串解码问题”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "数组中和为k的子数组数量",
+    "content": "前缀和+哈希表。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,数组中和为,的子数组数量,前缀和,哈希表",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "数组中和为k的子数组数量",
+    "legacy_titles": [
+      "请使用 Python 解决“数组中和为k的子数组数量”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "求数组中最长连续子数组",
+    "content": "滑动窗口实现。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,求数组中最长连续,子数组,滑动窗口实现",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "求数组中最长连续子数组",
+    "legacy_titles": [
+      "请使用 Python 解决“求数组中最长连续子数组”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "寻找旋转数组最小值",
+    "content": "二分查找算法。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,寻找旋转数组最小,二分查找算法",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "寻找旋转数组最小值",
+    "legacy_titles": [
+      "请使用 Python 解决“寻找旋转数组最小值”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "搜索旋转排序数组",
+    "content": "改进二分查找。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,搜索旋转排序数组,改进二分查找",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "搜索旋转排序数组",
+    "legacy_titles": [
+      "请使用 Python 解决“搜索旋转排序数组”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "字符串最小覆盖子串",
+    "content": "滑动窗口算法。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,字符串最小覆盖子,滑动窗口算法",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "字符串最小覆盖子串",
+    "legacy_titles": [
+      "请使用 Python 解决“字符串最小覆盖子串”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "实现表达式计算器",
+    "content": "栈实现运算符优先级。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,实现表达式计算器,栈实现运算符优先",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "实现表达式计算器",
+    "legacy_titles": [
+      "请使用 Python 解决“实现表达式计算器”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "求二叉树最大路径和",
+    "content": "递归动态规划。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,求二叉树最大路径,递归动态规划",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "求二叉树最大路径和",
+    "legacy_titles": [
+      "请使用 Python 解决“求二叉树最大路径和”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "判断图是否为二分图",
+    "content": "BFS染色算法。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,判断图是否为二分,BFS,染色算法",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "判断图是否为二分图",
+    "legacy_titles": [
+      "请使用 Python 解决“判断图是否为二分图”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "title": "课程表拓扑排序问题",
+    "content": "入度统计+BFS。",
+    "tags": "Python,算法,数据结构",
+    "topic": "算法与数据结构",
+    "keywords": "Python,算法,数据结构,课程表拓扑排序问,入度统计,BFS",
+    "difficulty": 1,
+    "source": "question_reference",
+    "legacy_title": "课程表拓扑排序问题",
+    "legacy_titles": [
+      "请使用 Python 解决“课程表拓扑排序问题”问题，说明核心思路和关键步骤，分析时间与空间复杂度，并指出需要处理的边界情况。"
+    ]
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是网络安全？",
+    "content": "保护网络系统和数据免受攻击破坏或未授权访问的技术与措施。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是网络安全,保护网络系统和数,据免受攻击破坏或,未授权访问的技术,与措施",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是CIA安全模型？",
+    "content": "机密性Confidentiality 完整性Integrity 可用性Availability。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,CIA,安全模型,机密性,Confidentiality,完整性,Integrity",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是防火墙？",
+    "content": "用于控制网络流量和访问策略的安全设备或软件。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是防火墙,用于控制网络流量,和访问策略的安全,设备或软件",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "防火墙的主要类型有哪些？",
+    "content": "包过滤防火墙 状态检测防火墙 应用层防火墙。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,防火墙的主要类型,有哪些,包过滤防火墙,状态检测防火墙,应用层防火墙",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是IDS？",
+    "content": "入侵检测系统用于监测网络异常行为。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,IDS,入侵检测系统用于,监测网络异常行为",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是IPS？",
+    "content": "入侵防御系统可主动阻止攻击行为。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,IPS,入侵防御系统可主,动阻止攻击行为",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是VPN？",
+    "content": "虚拟专用网络用于安全传输数据。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,VPN,虚拟专用网络用于,安全传输数据",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是SSL/TLS？",
+    "content": "用于加密网络通信的安全协议。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,SSL/TLS,用于加密网络通信,的安全协议",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "HTTPS和HTTP的区别？",
+    "content": "HTTPS使用SSL/TLS加密通信。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,HTTPS,HTTP,的区别,SSL/TLS,加密通信",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是数字证书？",
+    "content": "用于验证身份和建立安全连接的电子证书。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是数字证书,用于验证身份和建,立安全连接的电子,证书",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是公钥加密？",
+    "content": "使用公钥加密私钥解密的加密方式。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是公钥加密,使用公钥加密私钥,解密的加密方式",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是对称加密？",
+    "content": "加密和解密使用同一密钥。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是对称加密,加密和解密使用同,一密钥",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "常见对称加密算法有哪些？",
+    "content": "AES DES 3DES。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,常见对称加密算法,有哪些,AES,DES",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "常见非对称加密算法有哪些？",
+    "content": "RSA ECC。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,常见非对称加密算,法有哪些,RSA,ECC",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是哈希算法？",
+    "content": "将数据转换为固定长度摘要的算法。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是哈希算法,将数据转换为固定,长度摘要的算法",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "常见哈希算法有哪些？",
+    "content": "MD5 SHA1 SHA256。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,常见哈希算法有哪,MD5,SHA1,SHA256",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是盐值salt？",
+    "content": "用于增强密码哈希安全性的随机值。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是盐值,salt,用于增强密码哈希,安全性的随机值",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是身份认证？",
+    "content": "验证用户身份的过程。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是身份认证,验证用户身份的过",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "常见身份认证方式有哪些？",
+    "content": "密码 生物识别 双因素认证。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,常见身份认证方式,有哪些,密码,生物识别,双因素认证",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是多因素认证？",
+    "content": "使用两种或以上认证方式验证身份。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是多因素认证,使用两种或以上认,证方式验证身份",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是XSS攻击？",
+    "content": "跨站脚本攻击通过注入脚本执行恶意代码。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,XSS,攻击,跨站脚本攻击通过,注入脚本执行恶意,代码",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何防御XSS？",
+    "content": "输入过滤 输出编码 CSP策略。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,如何防御,XSS,输入过滤,输出编码,CSP,策略",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是SQL注入？",
+    "content": "攻击者插入恶意SQL语句执行数据库操作。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,SQL,注入,攻击者插入恶意,语句执行数据库操",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何防止SQL注入？",
+    "content": "使用预编译语句和参数化查询。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,如何防止,SQL,注入,使用预编译语句和,参数化查询",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是CSRF攻击？",
+    "content": "跨站请求伪造诱导用户执行恶意请求。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,CSRF,攻击,跨站请求伪造诱导,用户执行恶意请求",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何防御CSRF？",
+    "content": "Token验证 SameSite Cookie。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,如何防御,CSRF,Token,验证,SameSite,Cookie",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是DDoS攻击？",
+    "content": "分布式拒绝服务攻击使服务器无法提供服务。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,DDoS,攻击,分布式拒绝服务攻,击使服务器无法提,供服务",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "常见DDoS攻击类型？",
+    "content": "SYN Flood UDP Flood HTTP Flood。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,常见,DDoS,攻击类型,SYN,Flood,UDP,HTTP",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何防御DDoS攻击？",
+    "content": "流量清洗 CDN 限流。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,如何防御,DDoS,攻击,流量清洗,CDN,限流",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是木马？",
+    "content": "隐藏在系统中的恶意程序。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是木马,隐藏在系统中的恶,意程序",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是病毒？",
+    "content": "能够自我复制传播的恶意程序。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是病毒,能够自我复制传播,的恶意程序",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是蠕虫？",
+    "content": "通过网络自动传播的恶意程序。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是蠕虫,通过网络自动传播,的恶意程序",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是勒索软件？",
+    "content": "加密用户数据并索要赎金的恶意软件。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是勒索软件,加密用户数据并索,要赎金的恶意软件",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是社会工程学攻击？",
+    "content": "利用人类心理弱点进行攻击。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是社会工程学,攻击,利用人类心理弱点,进行攻击",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是钓鱼攻击？",
+    "content": "通过伪造网站或邮件获取用户信息。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是钓鱼攻击,通过伪造网站或邮,件获取用户信息",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是ARP欺骗？",
+    "content": "伪造ARP响应进行中间人攻击。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,ARP,欺骗,伪造,响应进行中间人攻",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是DNS劫持？",
+    "content": "篡改DNS解析结果。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,DNS,劫持,篡改,解析结果",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是中间人攻击？",
+    "content": "攻击者拦截并篡改通信数据。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是中间人攻击,攻击者拦截并篡改,通信数据",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是端口扫描？",
+    "content": "探测目标系统开放端口。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是端口扫描,探测目标系统开放,端口",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "常见端口扫描工具？",
+    "content": "Nmap Masscan。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,常见端口扫描工具,Nmap,Masscan",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是漏洞？",
+    "content": "系统或软件存在的安全缺陷。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是漏洞,系统或软件存在的,安全缺陷",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是漏洞扫描？",
+    "content": "自动检测系统安全漏洞的过程。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是漏洞扫描,自动检测系统安全,漏洞的过程",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "常见漏洞扫描工具？",
+    "content": "Nessus OpenVAS。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,常见漏洞扫描工具,Nessus,OpenVAS",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是渗透测试？",
+    "content": "模拟攻击检测系统安全性。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是渗透测试,模拟攻击检测系统,安全性",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "渗透测试步骤有哪些？",
+    "content": "信息收集 扫描 利用 权限提升。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,渗透测试步骤有哪,信息收集,扫描,利用,权限提升",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是权限提升？",
+    "content": "攻击者获取更高系统权限。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是权限提升,攻击者获取更高系,统权限",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是零日漏洞？",
+    "content": "尚未公开或修复的漏洞。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是零日漏洞,尚未公开或修复的,漏洞",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是安全补丁？",
+    "content": "用于修复漏洞的软件更新。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是安全补丁,用于修复漏洞的软,件更新",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是日志审计？",
+    "content": "通过日志分析发现安全问题。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是日志审计,通过日志分析发现,安全问题",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是SIEM？",
+    "content": "安全信息与事件管理系统。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,SIEM,安全信息与事件管,理系统",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "你参与过哪些安全项目？",
+    "content": "描述项目经验和职责。",
+    "tags": "项目实践",
+    "topic": "项目实践",
+    "keywords": "项目实践,你参与过哪些安全,项目,描述项目经验和职",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何进行安全漏洞扫描？",
+    "content": "使用工具扫描并分析结果。",
+    "tags": "项目实践",
+    "topic": "项目实践",
+    "keywords": "项目实践,如何进行安全漏洞,扫描,使用工具扫描并分,析结果",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何进行安全加固？",
+    "content": "关闭不必要服务更新补丁。",
+    "tags": "项目实践",
+    "topic": "项目实践",
+    "keywords": "项目实践,如何进行安全加固,关闭不必要服务更,新补丁",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何部署防火墙策略？",
+    "content": "根据业务需求配置访问控制。",
+    "tags": "项目实践",
+    "topic": "项目实践",
+    "keywords": "项目实践,如何部署防火墙策,根据业务需求配置,访问控制",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何处理安全事件？",
+    "content": "分析日志定位问题并修复。",
+    "tags": "项目实践",
+    "topic": "项目实践",
+    "keywords": "项目实践,如何处理安全事件,分析日志定位问题,并修复",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何进行安全监控？",
+    "content": "部署IDS和日志监控系统。",
+    "tags": "项目实践",
+    "topic": "项目实践",
+    "keywords": "项目实践,如何进行安全监控,部署,IDS,和日志监控系统",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何进行数据加密？",
+    "content": "使用加密算法保护数据。",
+    "tags": "项目实践",
+    "topic": "项目实践",
+    "keywords": "项目实践,如何进行数据加密,使用加密算法保护,数据",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何进行安全测试？",
+    "content": "漏洞扫描和渗透测试。",
+    "tags": "项目实践",
+    "topic": "项目实践",
+    "keywords": "项目实践,如何进行安全测试,漏洞扫描和渗透测",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何设计安全架构？",
+    "content": "多层防御和访问控制。",
+    "tags": "项目实践",
+    "topic": "项目实践",
+    "keywords": "项目实践,如何设计安全架构,多层防御和访问控",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何进行安全培训？",
+    "content": "提高员工安全意识。",
+    "tags": "项目实践",
+    "topic": "项目实践",
+    "keywords": "项目实践,如何进行安全培训,提高员工安全意识",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "发现服务器被入侵怎么办？",
+    "content": "隔离系统分析日志修复漏洞。",
+    "tags": "场景设计",
+    "topic": "场景设计",
+    "keywords": "场景设计,发现服务器被入侵,怎么办,隔离系统分析日志,修复漏洞",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "网站被SQL注入攻击怎么办？",
+    "content": "修复代码过滤输入并更新补丁。",
+    "tags": "场景设计",
+    "topic": "场景设计",
+    "keywords": "场景设计,网站被,SQL,注入攻击怎么办,修复代码过滤输入,并更新补丁",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "用户账号被盗如何处理？",
+    "content": "重置密码并检查异常登录。",
+    "tags": "场景设计",
+    "topic": "场景设计",
+    "keywords": "场景设计,用户账号被盗如何,处理,重置密码并检查异,常登录",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "服务器被DDoS攻击怎么办？",
+    "content": "启用流量清洗和限流措施。",
+    "tags": "场景设计",
+    "topic": "场景设计",
+    "keywords": "场景设计,服务器被,DDoS,攻击怎么办,启用流量清洗和限,流措施",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何保护用户密码安全？",
+    "content": "使用哈希+salt存储密码。",
+    "tags": "场景设计",
+    "topic": "场景设计",
+    "keywords": "场景设计,如何保护用户密码,安全,使用哈希,salt,存储密码",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何设计安全登录系统？",
+    "content": "验证码+多因素认证。",
+    "tags": "场景设计",
+    "topic": "场景设计",
+    "keywords": "场景设计,如何设计安全登录,系统,验证码,多因素认证",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何防止暴力破解？",
+    "content": "限制登录次数和验证码。",
+    "tags": "场景设计",
+    "topic": "场景设计",
+    "keywords": "场景设计,如何防止暴力破解,限制登录次数和验,证码",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何保护API接口安全？",
+    "content": "使用Token认证和签名验证。",
+    "tags": "场景设计",
+    "topic": "场景设计",
+    "keywords": "场景设计,如何保护,API,接口安全,Token,认证和签名验证",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何防止数据泄露？",
+    "content": "加密传输和访问控制。",
+    "tags": "场景设计",
+    "topic": "场景设计",
+    "keywords": "场景设计,如何防止数据泄露,加密传输和访问控",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何进行安全审计？",
+    "content": "分析系统日志发现异常行为。",
+    "tags": "场景设计",
+    "topic": "场景设计",
+    "keywords": "场景设计,如何进行安全审计,分析系统日志发现,异常行为",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "团队出现安全问题如何处理？",
+    "content": "协调分析并修复漏洞。",
+    "tags": "行为能力",
+    "topic": "行为能力",
+    "keywords": "行为能力,团队出现安全问题,如何处理,协调分析并修复漏",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何提升团队安全意识？",
+    "content": "开展培训和安全演练。",
+    "tags": "行为能力",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何提升团队安全,意识,开展培训和安全演",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "遇到安全漏洞如何报告？",
+    "content": "按照流程提交安全报告。",
+    "tags": "行为能力",
+    "topic": "行为能力",
+    "keywords": "行为能力,遇到安全漏洞如何,报告,按照流程提交安全",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何持续学习安全技术？",
+    "content": "阅读安全报告参与CTF。",
+    "tags": "行为能力",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何持续学习安全,技术,阅读安全报告参与,CTF",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何进行安全代码审计？",
+    "content": "检查代码漏洞和风险点。",
+    "tags": "行为能力",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何进行安全代码,审计,检查代码漏洞和风,险点",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何进行风险评估？",
+    "content": "分析威胁概率和影响。",
+    "tags": "行为能力",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何进行风险评估,分析威胁概率和影",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何处理安全压力？",
+    "content": "合理安排工作和沟通。",
+    "tags": "行为能力",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何处理安全压力,合理安排工作和沟",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何进行安全技术分享？",
+    "content": "整理经验进行分享。",
+    "tags": "行为能力",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何进行安全技术,分享,整理经验进行分享",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "如何保证系统安全合规？",
+    "content": "遵循安全标准和规范。",
+    "tags": "行为能力",
+    "topic": "行为能力",
+    "keywords": "行为能力,如何保证系统安全,合规,遵循安全标准和规",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "未来网络安全趋势是什么？",
+    "content": "零信任架构和AI安全。",
+    "tags": "行为能力",
+    "topic": "行为能力",
+    "keywords": "行为能力,未来网络安全趋势,是什么,零信任架构和,AI,安全",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是零信任安全模型？",
+    "content": "默认不信任任何访问请求。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是零信任安全,模型,默认不信任任何访,问请求",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是WAF？",
+    "content": "Web应用防火墙防御Web攻击。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,WAF,Web,应用防火墙防御,攻击",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是安全沙箱？",
+    "content": "隔离运行可疑程序环境。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是安全沙箱,隔离运行可疑程序,环境",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是恶意代码分析？",
+    "content": "分析恶意程序行为。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是恶意代码分,分析恶意程序行为",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是威胁情报？",
+    "content": "收集攻击信息用于防御。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是威胁情报,收集攻击信息用于,防御",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是安全运营中心SOC？",
+    "content": "集中监控安全事件的部门。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是安全运营中,SOC,集中监控安全事件,的部门",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是数据脱敏？",
+    "content": "隐藏敏感数据保护隐私。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是数据脱敏,隐藏敏感数据保护,隐私",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是访问控制？",
+    "content": "限制用户访问权限。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是访问控制,限制用户访问权限",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是RBAC权限模型？",
+    "content": "基于角色的访问控制模型。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,RBAC,权限模型,基于角色的访问控,制模型",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是最小权限原则？",
+    "content": "用户只拥有必要权限。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是最小权限原,用户只拥有必要权",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是安全基线？",
+    "content": "系统安全配置标准。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是安全基线,系统安全配置标准",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是蜜罐系统？",
+    "content": "诱捕攻击者的安全系统。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是蜜罐系统,诱捕攻击者的安全,系统",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是网络隔离？",
+    "content": "通过隔离减少攻击影响。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是网络隔离,通过隔离减少攻击,影响",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是APT攻击？",
+    "content": "高级持续性威胁攻击。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是,APT,攻击,高级持续性威胁攻",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是漏洞利用？",
+    "content": "利用漏洞获取系统控制。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是漏洞利用,利用漏洞获取系统,控制",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是安全策略？",
+    "content": "用于管理安全规则的策略。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是安全策略,用于管理安全规则,的策略",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是日志分析？",
+    "content": "通过日志发现安全异常。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是日志分析,通过日志发现安全,异常",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是安全事件响应？",
+    "content": "处理安全攻击事件流程。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是安全事件响,处理安全攻击事件,流程",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是数据备份？",
+    "content": "定期复制数据防止丢失。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是数据备份,定期复制数据防止,丢失",
+    "difficulty": 1,
+    "source": "question_reference"
+  },
+  {
+    "position_code": "web_sec",
+    "title": "什么是灾难恢复？",
+    "content": "在系统故障后恢复业务运行。",
+    "tags": "技术基础",
+    "topic": "技术基础",
+    "keywords": "技术基础,什么是灾难恢复,在系统故障后恢复,业务运行",
+    "difficulty": 1,
+    "source": "question_reference"
+  }
+]

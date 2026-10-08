@@ -1,0 +1,22 @@
+[
+  {
+    "code": "java_backend",
+    "name": "Java 后端开发",
+    "description": "面向 Java/Spring 技术栈的后端岗位"
+  },
+  {
+    "code": "web_frontend",
+    "name": "Web 前端开发",
+    "description": "面向 HTML/CSS/JS 及现代前端框架的岗位"
+  },
+  {
+    "code": "python_algorithm",
+    "name": "Python 算法/数据",
+    "description": "Python 算法与数据方向"
+  },
+  {
+    "code": "web_sec",
+    "name": "网络安全",
+    "description": "网络安全"
+  }
+]

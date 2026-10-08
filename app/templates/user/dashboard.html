@@ -1,0 +1,61 @@
+<section id="userDashboard" class="view-section active">
+  <h2 class="page-title">数据大屏</h2>
+  <div class="dashboard-cards dashboard-cards-user" id="userStatCards"></div>
+  <div class="dashboard-charts dashboard-charts-user">
+    <div class="chart-wrap">
+      <h3>成绩趋势</h3>
+      <p class="text-secondary small mb-2" id="userTrendScope"></p>
+      <div class="chart-inner chart-inner-with-hint">
+        <canvas id="userChartTrend"></canvas>
+        <p class="chart-empty-hint chart-empty-hint-center" id="userChartTrendHint" style="display:none;">暂无成绩记录，完成面试后展示</p>
+      </div>
+    </div>
+    <div class="chart-wrap">
+      <h3>各岗位平均分</h3>
+      <div class="chart-inner chart-inner-with-hint">
+        <canvas id="userChartByPosition"></canvas>
+        <p class="chart-empty-hint chart-empty-hint-center" id="userChartByPositionHint" style="display:none;">暂无各岗位成绩</p>
+      </div>
+    </div>
+  </div>
+  <div class="dashboard-charts dashboard-charts-user">
+    <div class="chart-wrap">
+      <h3>能力维度趋势</h3>
+      <div class="chart-inner chart-inner-with-hint">
+        <canvas id="userChartDimensions"></canvas>
+        <p class="chart-empty-hint chart-empty-hint-center" id="userChartDimensionsHint" style="display:none;">至少完成两次同岗位、同评分版本面试后展示</p>
+      </div>
+    </div>
+    <div class="chart-wrap">
+      <h3>题型得分趋势</h3>
+      <div class="chart-inner chart-inner-with-hint">
+        <canvas id="userChartQuestionTypes"></canvas>
+        <p class="chart-empty-hint chart-empty-hint-center" id="userChartQuestionTypesHint" style="display:none;">至少完成两次同岗位、同评分版本面试后展示</p>
+      </div>
+    </div>
+  </div>
+  <div class="dashboard-charts dashboard-charts-user">
+    <div class="chart-wrap">
+      <h3>得分分布</h3>
+      <div class="chart-inner chart-inner-with-hint">
+        <canvas id="userChartScoreDist"></canvas>
+        <p class="chart-empty-hint chart-empty-hint-center" id="userChartScoreDistHint" style="display:none;">暂无得分数据</p>
+      </div>
+    </div>
+    <div class="chart-wrap chart-wrap-table">
+      <h3>最近成绩</h3>
+      <div id="userRecentScores"></div>
+      <p class="chart-empty-hint" id="userRecentScoresHint" style="display:none;">完成模拟面试后，最近成绩将显示在这里</p>
+    </div>
+  </div>
+  <div class="dashboard-charts dashboard-charts-user">
+    <div class="chart-wrap chart-wrap-table">
+      <h3>薄弱项变化</h3>
+      <div id="userWeaknessSummary"></div>
+    </div>
+    <div class="chart-wrap chart-wrap-table">
+      <h3>专项复测记录</h3>
+      <div id="userTrainingComparisons"></div>
+    </div>
+  </div>
+</section>

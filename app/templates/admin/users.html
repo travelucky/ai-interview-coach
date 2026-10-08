@@ -1,0 +1,17 @@
+<section id="adminUsers" class="view-section">
+  <h2 class="page-title">用户管理</h2>
+  <div id="userListMsg" class="alert alert-danger mb-3" role="alert" style="display: none;"></div>
+  <div class="toolbar">
+    <span></span>
+    <button type="button" class="btn btn-primary" id="btnAddUser">新增用户</button>
+  </div>
+  <div class="table-wrap">
+    <table class="table">
+      <thead>
+        <tr><th>用户名</th><th>昵称</th><th>角色</th><th>创建时间</th><th width="140">操作</th></tr>
+      </thead>
+      <tbody id="userTbody"></tbody>
+    </table>
+  </div>
+  <nav class="d-flex justify-content-center"><ul class="pagination pagination-sm" id="userPagination"></ul></nav>
+</section>

@@ -1,0 +1,18 @@
+<section id="userHistory" class="view-section">
+  <h2 class="page-title">历史成绩</h2>
+  <div class="summary-cards summary-cards-inline" id="userHistorySummary">
+    <div class="stat-card stat-card-sm"><div class="label">总场次</div><div class="value" id="userHistoryTotal">-</div></div>
+    <div class="stat-card stat-card-sm"><div class="label">平均得分</div><div class="value" id="userHistoryAvg">-</div></div>
+    <div class="stat-card stat-card-sm"><div class="label">最高得分</div><div class="value" id="userHistoryBest">-</div></div>
+  </div>
+  <div class="table-wrap">
+    <table class="table">
+      <thead>
+        <tr><th>开始时间</th><th>岗位</th><th>综合得分</th><th>状态</th><th width="100">操作</th></tr>
+      </thead>
+      <tbody id="historyTbody"></tbody>
+    </table>
+  </div>
+  <div id="historyEmpty" class="empty-hint hide">暂无历史记录</div>
+  <nav class="d-flex justify-content-center"><ul class="pagination pagination-sm" id="historyPagination"></ul></nav>
+</section>

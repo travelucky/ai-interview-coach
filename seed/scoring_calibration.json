@@ -1,0 +1,110 @@
+[
+  {
+    "position_code": "java_backend",
+    "question": "请简述 Spring 的 IoC 与 AOP。请从概念与使用场景简要说明。",
+    "answers": {
+      "high": "首先，IoC 是控制反转，Spring 容器负责对象创建和依赖装配；AOP 是面向切面，把日志、事务等横切关注点从业务逻辑中解耦。例如项目中通过依赖注入替换实现，通过切面统一记录审计日志。",
+      "medium": "IoC 是依赖注入，AOP 可以统一做日志和事务，它们都是 Spring 的功能。",
+      "low": "我用过 Spring，功能很多。"
+    }
+  },
+  {
+    "position_code": "java_backend",
+    "question": "如何设计一个高并发的秒杀接口？从缓存、限流、数据库等角度说明。",
+    "answers": {
+      "high": "首先缓存预热库存并用令牌桶限流，随后通过消息队列异步下单；数据库使用唯一约束和乐观锁防止超卖。异常时降级并监控库存差异，最后用压测验证吞吐和错误率。",
+      "medium": "使用 Redis 缓存并限流，请求进入消息队列后再写数据库。",
+      "low": "增加服务器就可以处理高并发。"
+    }
+  },
+  {
+    "position_code": "java_backend",
+    "question": "什么是JVM？",
+    "answers": {
+      "high": "JVM 即 Java Virtual Machine，负责加载和执行 Java 字节码，提供跨平台运行时，并管理堆、栈等内存和垃圾回收。不同垃圾收集器需要按延迟与吞吐目标取舍。",
+      "medium": "JVM 是运行 Java 字节码的虚拟机，也会做内存管理和垃圾回收。",
+      "low": "JVM 是一个 Java 开发工具。"
+    }
+  },
+  {
+    "position_code": "web_frontend",
+    "question": "简述 HTTP 与 HTTPS 的区别。从协议与安全角度说明。",
+    "answers": {
+      "high": "HTTPS 是 HTTP 运行在 TLS 加密通道之上，通过证书验证服务端身份，并提供机密性和完整性；代价是握手与证书管理开销，实践中还应启用 HSTS。",
+      "medium": "HTTPS 比 HTTP 多了 TLS/SSL 加密和证书，因此传输更安全。",
+      "low": "HTTPS 的端口不一样，速度也更快。"
+    }
+  },
+  {
+    "position_code": "web_frontend",
+    "question": "什么是HTML？",
+    "answers": {
+      "high": "HTML 是描述网页结构和语义的标记语言，通过元素组织标题、导航、正文和表单；它不负责业务逻辑，样式与交互通常分别由 CSS 和 JavaScript 完成。",
+      "medium": "HTML 是构建网页结构的标记语言，包含各种标签。",
+      "low": "HTML 是一种数据库。"
+    }
+  },
+  {
+    "position_code": "web_frontend",
+    "question": "HTML语义化标签有哪些？",
+    "answers": {
+      "high": "常见语义化标签有 header、nav、main、article、section、aside 和 footer。应根据内容含义选择，它们有助于可访问性、SEO 和代码维护。",
+      "medium": "有 header、nav、article、section、footer 等标签。",
+      "low": "主要是 div 和 span。"
+    }
+  },
+  {
+    "position_code": "python_algorithm",
+    "question": "两数之和：给定数组和目标值返回两个数下标",
+    "answers": {
+      "high": "遍历数组时用哈希表保存值到下标的映射，对当前值计算 target-num 并查询；命中后返回两个下标。时间复杂度 O(n)，空间复杂度 O(n)，还需明确不存在答案和重复值的边界。",
+      "medium": "用哈希表记录已经遍历的数字和下标，查找目标差值，复杂度 O(n)。",
+      "low": "用两层循环枚举所有数字。"
+    }
+  },
+  {
+    "position_code": "python_algorithm",
+    "question": "判断一个字符串是否为回文字符串",
+    "answers": {
+      "high": "使用左右双指针从两端向中间比较，按题意决定是否忽略大小写和非字母数字字符；一旦不同立即返回 false。时间 O(n)、额外空间 O(1)，空串按约定处理。",
+      "medium": "用双指针从字符串两端向中间比较。",
+      "low": "把字符串排序后看看是否一样。"
+    }
+  },
+  {
+    "position_code": "python_algorithm",
+    "question": "计算斐波那契数列第n项",
+    "answers": {
+      "high": "使用动态规划迭代保存前两项，从 2 到 n 更新，时间 O(n)、空间 O(1)；先处理 n=0 和 n=1。朴素递归会产生指数级重复计算。",
+      "medium": "可以用递归或动态规划计算，动态规划更快。",
+      "low": "直接返回 n。"
+    }
+  },
+  {
+    "position_code": "web_sec",
+    "question": "什么是网络安全？",
+    "answers": {
+      "high": "网络安全通过身份认证、访问控制、加密、监测和响应等措施，保护系统与数据免受未授权访问、篡改和中断；目标覆盖机密性、完整性和可用性，并需要持续风险管理。",
+      "medium": "网络安全是保护网络系统和数据不被攻击或未授权访问。",
+      "low": "网络安全就是安装杀毒软件。"
+    }
+  },
+  {
+    "position_code": "web_sec",
+    "question": "什么是CIA安全模型？",
+    "answers": {
+      "high": "CIA 指机密性 Confidentiality、完整性 Integrity 和可用性 Availability。加密与权限保护机密性，签名和校验保护完整性，冗余与容灾保障可用性，方案设计要权衡三者。",
+      "medium": "CIA 包括机密性、完整性和可用性。",
+      "low": "CIA 是一种攻击工具。"
+    }
+  },
+  {
+    "position_code": "web_sec",
+    "question": "什么是防火墙？",
+    "answers": {
+      "high": "防火墙依据源、目的、端口、协议或应用规则控制网络流量，可部署在主机或网络边界。它用于缩小攻击面，但不能替代身份认证、漏洞修复和应用层防护。",
+      "medium": "防火墙根据访问策略允许或阻止网络流量。",
+      "low": "防火墙能阻止所有黑客攻击。"
+    }
+  }
+]

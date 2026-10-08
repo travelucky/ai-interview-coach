@@ -1,0 +1,65 @@
+/* 设计语言：科技风 — 冷色主色、清晰层级、无渐变炫技 */
+:root {
+  --tc-primary: #0A84FF;
+  --tc-primary-hover: #0066CC;
+  --tc-primary-light: #E6F2FF;
+  --tc-success: #0D9488;
+  --tc-warning: #D97706;
+  --tc-danger: #DC2626;
+  --tc-bg: #F1F3F5;
+  --tc-bg-page: #F1F3F5;
+  --tc-card: #FFFFFF;
+  --tc-border: #DEE2E6;
+  --tc-border-light: #E9ECEF;
+  --tc-text: #212529;
+  --tc-text-secondary: #495057;
+  --tc-text-placeholder: #868E96;
+  --tc-sidebar: #0D1117;
+  --tc-sidebar-text: rgba(255,255,255,.72);
+  --tc-sidebar-text-active: #FFFFFF;
+  --tc-sidebar-hover: rgba(255,255,255,.06);
+  --tc-shadow: 0 1px 2px rgba(0,0,0,.06);
+  --tc-shadow-card: 0 1px 3px rgba(0,0,0,.07);
+  --tc-radius: 6px;
+  --tc-radius-lg: 8px;
+  --tc-font: "PingFang SC", "Microsoft YaHei", -apple-system, sans-serif;
+  --tc-accent: 3px;
+  /* 兼容旧变量名 */
+  --primary: var(--tc-primary);
+  --primary-dark: var(--tc-primary-hover);
+  --success: var(--tc-success);
+  --warning: var(--tc-warning);
+  --danger: var(--tc-danger);
+  --bg-page: var(--tc-bg-page);
+  --bg-card: var(--tc-card);
+  --text-primary: var(--tc-text);
+  --text-secondary: var(--tc-text-secondary);
+  --border: var(--tc-border);
+  --shadow: var(--tc-shadow);
+  --shadow-lg: var(--tc-shadow-card);
+  --radius: var(--tc-radius);
+  --font-sans: var(--tc-font);
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: var(--tc-font);
+  font-size: 14px;
+  color: var(--tc-text);
+  background: var(--tc-bg);
+  background-image: linear-gradient(180deg, #F8F9FA 0%, var(--tc-bg) 12rem);
+  background-attachment: fixed;
+  line-height: 1.55;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.view-section { display: none; }
+.view-section.active { display: block; }
+.hide { display: none !important; }
+
+a { color: var(--tc-primary); text-decoration: none; }
+a:hover { color: var(--tc-primary-hover); }
+.btn-primary { background: var(--tc-primary); border-color: var(--tc-primary); }
+.btn-primary:hover { background: var(--tc-primary-hover); border-color: var(--tc-primary-hover); }

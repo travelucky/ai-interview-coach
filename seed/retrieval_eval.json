@@ -1,0 +1,29 @@
+[
+  {"id":"java-ioc","position_code":"java_backend","query":"Spring 容器如何实现控制反转和依赖装配？","expected_title_contains":["IoC","依赖注入"]},
+  {"id":"java-hashmap","position_code":"java_backend","query":"HashMap 的数据结构和寻址过程是什么？","expected_title_contains":["HashMap的底层结构"]},
+  {"id":"java-concurrent","position_code":"java_backend","query":"并发读写 Map 时 ConcurrentHashMap 怎样保证安全？","expected_title_contains":["ConcurrentHashMap"]},
+  {"id":"java-flash-sale","position_code":"java_backend","query":"秒杀系统面对瞬时流量如何做缓存、限流和扣库存？","expected_title_contains":["高并发的秒杀接口","秒杀系统"]},
+  {"id":"java-negative-css","position_code":"java_backend","query":"CSS Grid 如何定义二维布局？","expected_empty":true},
+  {"id":"java-negative-medical","position_code":"java_backend","query":"感冒发烧应该怎么用药？","expected_empty":true},
+
+  {"id":"frontend-flex","position_code":"web_frontend","query":"用 flex 怎样让子元素水平和垂直居中？","expected_title_contains":["flex","水平垂直居中"]},
+  {"id":"frontend-closure","position_code":"web_frontend","query":"JavaScript 函数为什么能记住它定义时的作用域？","expected_title_contains":["闭包"]},
+  {"id":"frontend-cors","position_code":"web_frontend","query":"前端请求不同源接口被浏览器拦截时怎么处理？","expected_title_contains":["跨域"]},
+  {"id":"frontend-vdom","position_code":"web_frontend","query":"React 中用来减少真实 DOM 操作的中间表示是什么？","expected_title_contains":["虚拟DOM"]},
+  {"id":"frontend-negative-jvm","position_code":"web_frontend","query":"JVM 分代垃圾回收器如何工作？","expected_empty":true},
+  {"id":"frontend-negative-travel","position_code":"web_frontend","query":"去旅游怎么订最便宜的机票？","expected_empty":true},
+
+  {"id":"python-binary-search","position_code":"python_algorithm","query":"对已排序数组用对数复杂度定位目标值","expected_title_contains":["二分查找"]},
+  {"id":"python-quicksort","position_code":"python_algorithm","query":"选择 pivot 并分区递归排序的算法如何实现？","expected_title_contains":["快速排序"]},
+  {"id":"python-lru","position_code":"python_algorithm","query":"设计一个最近最少使用淘汰的缓存结构","expected_title_contains":["LRU"]},
+  {"id":"python-tree-depth","position_code":"python_algorithm","query":"怎样递归计算一棵二叉树有多少层？","expected_title_contains":["二叉树最大深度"]},
+  {"id":"python-negative-xss","position_code":"python_algorithm","query":"网页输出未转义导致脚本注入怎么防御？","expected_empty":true},
+  {"id":"python-negative-cooking","position_code":"python_algorithm","query":"红烧肉应该放多少糖？","expected_empty":true},
+
+  {"id":"security-sqli","position_code":"web_sec","query":"如何用参数化查询阻止攻击者拼接 SQL 语句？","expected_title_contains":["防止SQL注入","防御SQL注入"]},
+  {"id":"security-ddos","position_code":"web_sec","query":"大量恶意流量打满带宽时应如何清洗和限流？","expected_title_contains":["防御DDoS","DDoS攻击怎么办"]},
+  {"id":"security-tls","position_code":"web_sec","query":"浏览器和服务器如何通过证书和握手建立加密通道？","expected_title_contains":["SSL/TLS","HTTPS"]},
+  {"id":"security-zero-trust","position_code":"web_sec","query":"什么安全模型强调从不默认信任并持续验证？","expected_title_contains":["零信任"]},
+  {"id":"security-negative-flex","position_code":"web_sec","query":"flex-grow 和 flex-shrink 如何分配剩余空间？","expected_empty":true},
+  {"id":"security-negative-finance","position_code":"web_sec","query":"明天股市会涨还是会跌？","expected_empty":true}
+]

@@ -1,0 +1,47 @@
+<section id="adminDashboard" class="view-section active">
+  <h2 class="page-title">数据大屏</h2>
+  <div class="dashboard-cards" id="adminStatCards"></div>
+  <div class="dashboard-charts dashboard-charts-row">
+    <div class="chart-wrap">
+      <h3>近 7 日面试场次</h3>
+      <div class="chart-inner"><canvas id="adminChartSessions"></canvas></div>
+      <p class="chart-empty-hint" id="adminChartSessionsHint" style="display:none;">暂无近7日数据</p>
+    </div>
+    <div class="chart-wrap">
+      <h3>各岗位题目数量</h3>
+      <div class="chart-inner"><canvas id="adminChartQuestions"></canvas></div>
+      <p class="chart-empty-hint" id="adminChartQuestionsHint" style="display:none;">暂无题目数据</p>
+    </div>
+  </div>
+  <div class="dashboard-charts dashboard-charts-row">
+    <div class="chart-wrap">
+      <h3>题目类型分布</h3>
+      <div class="chart-inner"><canvas id="adminChartQuestionType"></canvas></div>
+      <p class="chart-empty-hint" id="adminChartQuestionTypeHint" style="display:none;">暂无题目</p>
+    </div>
+    <div class="chart-wrap">
+      <h3>用户得分分布</h3>
+      <div class="chart-inner"><canvas id="adminChartScoreDistribution"></canvas></div>
+      <p class="chart-empty-hint" id="adminChartScoreDistributionHint" style="display:none;">暂无得分数据</p>
+    </div>
+  </div>
+  <div class="dashboard-charts dashboard-charts-row">
+    <div class="chart-wrap">
+      <h3>各岗位面试场次占比</h3>
+      <div class="chart-inner"><canvas id="adminChartSessionPosition"></canvas></div>
+      <p class="chart-empty-hint" id="adminChartSessionPositionHint" style="display:none;">暂无场次</p>
+    </div>
+    <div class="chart-wrap chart-wrap-table">
+      <h3>最近活动</h3>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr><th>场次</th><th>用户</th><th>岗位</th><th>开始时间</th><th>状态</th></tr>
+          </thead>
+          <tbody id="adminRecentActivityBody"></tbody>
+        </table>
+      </div>
+      <p class="chart-empty-hint" id="adminRecentActivityHint" style="display:none;">暂无最近活动</p>
+    </div>
+  </div>
+</section>

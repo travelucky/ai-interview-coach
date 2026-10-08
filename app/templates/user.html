@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}AI 模拟面试 - 能力提升系统{% endblock %}
+{% block body_class %}page-user{% endblock %}
+{% block extra_css %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/user.css') }}">
+{% endblock %}
+{% block content %}
+  <div class="user-wrap">
+    <header class="user-topbar">
+      <span class="user-brand">AI 模拟面试</span>
+      <nav class="user-nav">
+        <a href="#dashboard" class="user-nav-link active" data-view="userDashboard">数据大屏</a>
+        <a href="#interview" class="user-nav-link" data-view="userInterview">模拟面试</a>
+        <a href="#history" class="user-nav-link" data-view="userHistory">历史成绩</a>
+        <a href="#profile" class="user-nav-link" data-view="userProfile">个人中心</a>
+      </nav>
+      <div class="user-meta">
+        <span class="user-display-name" id="userDisplayName">--</span>
+        <button type="button" class="btn btn-outline-secondary btn-sm" id="btnLogout">退出</button>
+      </div>
+    </header>
+    <main class="user-main">
+      {% include 'user/dashboard.html' %}
+      {% include 'user/interview.html' %}
+      {% include 'user/history.html' %}
+      {% include 'user/profile.html' %}
+    </main>
+  </div>
+  {% include 'user/modals.html' %}
+{% endblock %}
+{% block scripts %}
+  <script src="{{ url_for('static', filename='vendor/chart/chart.umd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/user.js') }}"></script>
+{% endblock %}

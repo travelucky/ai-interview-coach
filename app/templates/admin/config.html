@@ -1,0 +1,33 @@
+<section id="adminConfig" class="view-section">
+  <h2 class="page-title">系统管理</h2>
+  <div id="configLoadError" class="alert alert-danger mb-3" role="alert" style="display: none;"></div>
+  <div class="config-form-wrap">
+    <div class="mb-3">
+      <label class="form-label" for="configQuestionsPerSession">每次面试抽取题目数</label>
+      <input type="number" class="form-control" id="configQuestionsPerSession" min="1" max="50">
+    </div>
+
+    <hr class="my-4">
+    <h5 class="mb-3">外部服务</h5>
+    <p class="text-muted">为防止密钥泄露，大模型和语音服务凭据只允许通过服务器的 <code>.env</code> 文件配置，管理后台不读取或保存密钥。</p>
+    <dl class="row mb-3">
+      <dt class="col-sm-4">大模型</dt>
+      <dd class="col-sm-8" id="configLlmStatus">检查中…</dd>
+      <dt class="col-sm-4">模型</dt>
+      <dd class="col-sm-8" id="configLlmModel">-</dd>
+      <dt class="col-sm-4">API Base</dt>
+      <dd class="col-sm-8" id="configLlmApiBase">-</dd>
+      <dt class="col-sm-4">讯飞语音识别</dt>
+      <dd class="col-sm-8" id="configAsrStatus">检查中…</dd>
+      <dt class="col-sm-4">RAG Embedding</dt>
+      <dd class="col-sm-8" id="configEmbeddingStatus">检查中…</dd>
+      <dt class="col-sm-4">Embedding 模型</dt>
+      <dd class="col-sm-8" id="configEmbeddingModel">-</dd>
+    </dl>
+
+    <div id="configSaveMsg" class="alert mb-3" role="alert" style="display: none;"></div>
+    <div class="config-form-actions">
+      <button type="button" class="btn btn-primary" id="btnSaveConfig">保存业务配置</button>
+    </div>
+  </div>
+</section>

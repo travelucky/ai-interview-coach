@@ -1,0 +1,87 @@
+<section id="userInterview" class="view-section">
+  <h2 class="page-title">模拟面试</h2>
+  <div class="interview-area">
+    <div id="interviewStart" class="interview-start-wrap">
+      <div id="activeInterviewPanel" class="active-interview-panel hide">
+        <div class="active-interview-panel__title">未完成的面试</div>
+        <div id="activeInterviewList" class="active-interview-list"></div>
+      </div>
+      <label class="form-label" for="interviewPosition">选择岗位</label>
+      <select class="form-select mb-3" id="interviewPosition"><option value="">请选择岗位</option></select>
+      <div class="interview-mode-notice" id="interviewModeNotice">正在检查面试模式…</div>
+      <button type="button" class="btn btn-primary btn-lg" id="btnStartInterview">开始面试</button>
+    </div>
+    <div id="interviewOngoing" class="interview-ongoing hide">
+      <div class="interview-top-bar">
+        <span class="interview-top-title" id="interviewTopTitle">模拟面试</span>
+        <span class="interview-top-progress">第 <span id="progressCurrent">0</span> / <span id="progressTotal">0</span> 题</span>
+        <div class="interview-top-actions">
+          <button type="button" class="btn btn-sm btn-outline-secondary" id="btnAbandonInterview">放弃面试</button>
+          <button type="button" class="btn btn-sm btn-outline-danger" id="btnFinishInterview">结束面试</button>
+        </div>
+      </div>
+      <div class="interview-layout" id="interviewLayout">
+        <div id="interviewLayoutOverlay" class="overlay-loading" style="display: none;">
+          <span class="spinner-inline"></span>
+          <span class="overlay-loading-text" id="interviewOverlayText">正在生成报告，请稍候…</span>
+        </div>
+        <aside class="interview-left">
+          <div class="interviewer-card" id="interviewerCard">
+            <div class="interviewer-avatar" id="interviewerAvatar" aria-hidden="true"
+                 data-img-idle="{{ url_for('static', filename='img/闭嘴.png') }}"
+                 data-img-half="{{ url_for('static', filename='img/半张.png') }}"
+                 data-img-speaking="{{ url_for('static', filename='img/张嘴.png') }}">
+              <img id="interviewerFace" src="{{ url_for('static', filename='img/闭嘴.png') }}" alt="AI 面试官" class="interviewer-img" />
+              <div class="interviewer-speaking-waves" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="interviewer-meta">
+              <div class="interviewer-name">AI 面试官</div>
+              <div class="interviewer-status" id="interviewerStatus">待命</div>
+            </div>
+          </div>
+          <div class="interview-question-index-wrap">
+            <div class="interview-question-index-label">题号</div>
+            <div id="interviewQuestionIndex" class="interview-question-index"></div>
+          </div>
+          <div class="interview-question-card">
+            <div class="question-label">题目</div>
+            <div id="currentQuestionText" class="question-text">加载中…</div>
+          </div>
+        </aside>
+        <div class="interview-right">
+          <div class="interview-answer-label">我的作答</div>
+          <div class="dialogue-list-wrap">
+            <div class="dialogue-list" id="dialogueList"></div>
+            <p class="dialogue-list-empty" id="dialogueListEmpty">请在下框输入回答后点击「提交回答」</p>
+          </div>
+          <div class="interview-reply-area">
+            <textarea class="form-control" id="replyText" placeholder="在此输入你的回答，或使用语音输入" rows="4"></textarea>
+            <div class="interview-reply-btns">
+              <button type="button" class="btn btn-primary" id="btnSendReply">提交回答</button>
+              <button type="button" class="voice-btn" id="btnVoice"><span>🎤</span> 语音</button>
+            </div>
+            <div class="voice-draft hide" id="voiceDraft" aria-live="polite">
+              <div class="voice-draft__title">语音草稿（尚未提交）</div>
+              <div class="voice-draft__status" id="voiceDraftStatus">正在处理录音…</div>
+              <audio class="voice-draft__audio" id="voicePlayback" controls preload="metadata"></audio>
+              <p class="voice-draft__hint">可先回放，并在上方文本框修改转写。只有点击「确认并提交」才会记入本题。</p>
+              <div class="voice-draft__actions">
+                <button type="button" class="btn btn-primary btn-sm" id="btnConfirmVoice">确认并提交</button>
+                <button type="button" class="btn btn-outline-secondary btn-sm" id="btnRerecordVoice">重新录制</button>
+                <button type="button" class="btn btn-outline-secondary btn-sm" id="btnCancelVoice">取消</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="interviewReport" class="interview-report-wrap hide">
+      <h3>面试报告</h3>
+      <div class="report-score" id="reportScore"></div>
+      <div id="reportContent"></div>
+      <button type="button" class="btn btn-primary mt-3" id="btnBackAfterReport">返回模拟面试</button>
+    </div>
+  </div>
+</section>

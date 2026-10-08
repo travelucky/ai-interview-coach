@@ -1,0 +1,23 @@
+<section id="adminKnowledge" class="view-section">
+  <h2 class="page-title">知识库管理</h2>
+  <p class="text-secondary">知识条目用于追问、评分参考和训练建议，与面试题目分开管理。编辑后向量状态会变为「待更新」。</p>
+  <div id="knowledgeListMsg" class="alert alert-danger mb-3" role="alert" style="display:none;"></div>
+  <div class="toolbar">
+    <div class="d-flex gap-2 flex-wrap align-items-center">
+      <select class="form-select form-select-sm" id="kFilterPosition" style="width:160px"><option value="">全部岗位</option></select>
+      <input type="text" class="form-control form-control-sm" id="kSearchKeyword" placeholder="搜索标题、内容或标签" style="width:220px" />
+      <button type="button" class="btn btn-outline-primary btn-sm" id="btnReloadKnowledge">查询</button>
+      <button type="button" class="btn btn-outline-secondary btn-sm" id="btnRefreshEmbeddings">更新缺失向量</button>
+      <input type="file" class="form-control form-control-sm" id="knowledgeImportFile" accept=".md,.txt,.pdf" style="width:230px">
+      <button type="button" class="btn btn-outline-secondary btn-sm" id="btnImportKnowledge">导入文档</button>
+    </div>
+    <button type="button" class="btn btn-primary" id="btnAddKnowledge">新增知识</button>
+  </div>
+  <div class="table-wrap">
+    <table class="table">
+      <thead><tr><th>标题</th><th>岗位</th><th>主题/来源</th><th>向量</th><th width="140">操作</th></tr></thead>
+      <tbody id="knowledgeTbody"></tbody>
+    </table>
+  </div>
+  <nav class="d-flex justify-content-center"><ul class="pagination pagination-sm" id="knowledgePagination"></ul></nav>
+</section>

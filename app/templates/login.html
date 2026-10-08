@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}登录 - AI 模拟面试与能力提升系统{% endblock %}
+{% block body_class %}page-login{% endblock %}
+{% block extra_css %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+{% endblock %}
+{% block content %}
+  <div class="login-screen">
+    <div class="login-card">
+      <div class="login-logo">
+        <div class="login-logo-icon">AI</div>
+        <h1 class="login-title">AI 模拟面试与能力提升系统</h1>
+        <p class="login-sub" id="loginSub">请使用账号密码登录</p>
+      </div>
+      <form id="loginForm" class="login-form">
+        <div class="mb-3">
+          <label class="form-label" for="loginUsername">用户名</label>
+          <input type="text" class="form-control" id="loginUsername" required placeholder="请输入用户名" autocomplete="username">
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="loginPassword">密码</label>
+          <input type="password" class="form-control" id="loginPassword" required placeholder="请输入密码" autocomplete="current-password">
+        </div>
+        <div id="loginError" class="login-error mt-2" role="alert" aria-live="assertive"></div>
+        <button type="submit" class="btn btn-primary w-100 btn-login-submit" id="loginBtn">登录</button>
+        <div class="login-switch">
+          <a href="#" id="toRegisterLink">没有账号？注册</a>
+        </div>
+      </form>
+
+      <form id="registerForm" class="login-form hide" autocomplete="off">
+        <div class="mb-3">
+          <label class="form-label" for="regUsername">用户名</label>
+          <input type="text" class="form-control" id="regUsername" required placeholder="字母/数字/_/-，3-64 位" autocomplete="username">
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="regDisplayName">显示名（可选）</label>
+          <input type="text" class="form-control" id="regDisplayName" placeholder="用于页面展示" autocomplete="nickname">
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="regPassword">密码</label>
+          <input type="password" class="form-control" id="regPassword" required placeholder="至少 6 位" autocomplete="new-password">
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="regPassword2">确认密码</label>
+          <input type="password" class="form-control" id="regPassword2" required placeholder="再次输入密码" autocomplete="new-password">
+        </div>
+        <div id="registerError" class="login-error mt-2" role="alert" aria-live="assertive"></div>
+        <button type="submit" class="btn btn-primary w-100 btn-login-submit" id="registerBtn">注册</button>
+        <div class="login-switch">
+          <a href="#" id="toLoginLink">返回登录</a>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}
+{% block scripts %}
+  <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+{% endblock %}

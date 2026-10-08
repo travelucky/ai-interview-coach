@@ -1,0 +1,164 @@
+[
+  {
+    "position_code": "python_algorithm",
+    "type": "project",
+    "content": "请介绍一个你用 Python 完成的数据处理或算法项目。你负责什么，遇到的性能瓶颈是什么，如何验证优化结果？",
+    "reference_answer": "用 STAR 结构说明背景和个人职责，给出数据规模与瓶颈定位方法，解释所选数据结构或并行方案，并用耗时、内存或吞吐量的前后数据验证结果。",
+    "difficulty": 3,
+    "tags": "Python,项目,性能优化",
+    "topic": "项目实践",
+    "source": "project_team",
+    "review_status": "ai_reviewed",
+    "reviewer": "Codex-assisted-review",
+    "is_core": true,
+    "scoring_points": [
+      {"name": "明确个人职责和数据规模", "keywords": ["负责", "数据量", "规模"], "weight": 30},
+      {"name": "说明瓶颈定位与方案取舍", "keywords": ["分析", "瓶颈", "取舍", "复杂度"], "weight": 40},
+      {"name": "用可量化指标验证结果", "keywords": ["耗时", "内存", "吞吐", "提升"], "weight": 30}
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "type": "project",
+    "content": "讲述一次你把算法原型工程化的经历，重点说明模块拆分、测试、异常处理和部署方式。",
+    "reference_answer": "说明从原型到服务或任务的边界拆分，使用单元测试与代表性数据验证正确性，处理输入、资源和超时异常，并描述环境、依赖和发布回滚方案。",
+    "difficulty": 3,
+    "tags": "Python,工程化,测试,部署",
+    "topic": "工程化",
+    "source": "project_team",
+    "review_status": "ai_reviewed",
+    "reviewer": "Codex-assisted-review",
+    "is_core": true,
+    "scoring_points": [
+      {"name": "说明模块边界和接口", "keywords": ["模块", "接口", "职责"], "weight": 30},
+      {"name": "覆盖测试和异常路径", "keywords": ["测试", "异常", "边界"], "weight": 40},
+      {"name": "说明部署、依赖和回滚", "keywords": ["部署", "依赖", "回滚"], "weight": 30}
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "type": "project",
+    "content": "介绍一次模型或算法效果不符合预期的项目。你如何建立基线、定位问题并推动迭代？",
+    "reference_answer": "先定义业务指标和离线基线，再检查数据质量、样本分布、特征和评估切分，通过对照实验定位问题，并说明迭代结果与仍存在的限制。",
+    "difficulty": 4,
+    "tags": "算法,评估,实验",
+    "topic": "算法项目",
+    "source": "project_team",
+    "review_status": "ai_reviewed",
+    "reviewer": "Codex-assisted-review",
+    "is_core": true,
+    "scoring_points": [
+      {"name": "定义业务指标和可复现基线", "keywords": ["指标", "基线", "复现"], "weight": 35},
+      {"name": "系统定位数据或算法问题", "keywords": ["数据", "分布", "特征", "切分"], "weight": 35},
+      {"name": "用对照实验说明迭代结果与限制", "keywords": ["对照", "实验", "结果", "限制"], "weight": 30}
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "type": "scenario",
+    "content": "一个 Python 批处理任务处理千万级记录时内存溢出，你会如何定位并改造？",
+    "reference_answer": "先用监控和剖析确认峰值来源，再采用流式读取、生成器、分块计算或外部排序控制内存；评估并行度与 IO，设置检查点和失败重试，并用压力测试验证。",
+    "difficulty": 4,
+    "tags": "Python,内存,大数据,性能",
+    "topic": "性能场景",
+    "source": "project_team",
+    "review_status": "ai_reviewed",
+    "reviewer": "Codex-assisted-review",
+    "is_core": true,
+    "scoring_points": [
+      {"name": "先测量并定位内存峰值", "keywords": ["监控", "剖析", "内存"], "weight": 30},
+      {"name": "采用流式或分块方案控制复杂度", "keywords": ["生成器", "流式", "分块", "外部排序"], "weight": 45},
+      {"name": "考虑失败恢复和压力验证", "keywords": ["重试", "检查点", "压力测试"], "weight": 25}
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "type": "scenario",
+    "content": "线上推荐接口延迟突然升高，但离线算法指标正常。你会按什么顺序排查？",
+    "reference_answer": "先确认告警范围和时间点，分解网关、服务、特征、模型和下游耗时；检查流量、资源、版本和数据漂移，必要时降级或回滚，再通过链路追踪和复现实验定位根因。",
+    "difficulty": 4,
+    "tags": "算法服务,延迟,排障,降级",
+    "topic": "线上排障",
+    "source": "project_team",
+    "review_status": "ai_reviewed",
+    "reviewer": "Codex-assisted-review",
+    "is_core": true,
+    "scoring_points": [
+      {"name": "分层定位端到端延迟", "keywords": ["链路", "耗时", "下游", "追踪"], "weight": 40},
+      {"name": "检查流量、资源、版本和数据变化", "keywords": ["流量", "资源", "版本", "漂移"], "weight": 35},
+      {"name": "说明降级、回滚和验证闭环", "keywords": ["降级", "回滚", "验证"], "weight": 25}
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "type": "scenario",
+    "content": "训练数据中正负样本极不均衡，你会如何选择评估指标、采样策略并避免数据泄漏？",
+    "reference_answer": "根据业务代价选择 PR-AUC、召回率或 F1 等指标；在训练集内使用权重、欠采样或过采样，验证集保持真实分布；按用户或时间切分并把预处理限制在训练折内避免泄漏。",
+    "difficulty": 4,
+    "tags": "机器学习,样本不均衡,评估,数据泄漏",
+    "topic": "模型评估",
+    "source": "project_team",
+    "review_status": "ai_reviewed",
+    "reviewer": "Codex-assisted-review",
+    "is_core": true,
+    "scoring_points": [
+      {"name": "根据业务代价选择评估指标", "keywords": ["PR-AUC", "召回", "F1", "代价"], "weight": 35},
+      {"name": "只在训练集使用重采样或权重", "keywords": ["权重", "过采样", "欠采样", "训练集"], "weight": 35},
+      {"name": "用正确切分与流水线避免泄漏", "keywords": ["时间切分", "用户切分", "流水线", "泄漏"], "weight": 30}
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "type": "behavioral",
+    "content": "讲述一次你与产品或数据同学对算法目标存在分歧的经历。你如何形成共识？",
+    "reference_answer": "说明具体分歧和各方约束，用业务指标、样例和小规模实验澄清目标，记录决策与边界，并复盘结果而不是只强调沟通态度。",
+    "difficulty": 2,
+    "tags": "协作,目标对齐,实验",
+    "topic": "团队协作",
+    "source": "project_team",
+    "review_status": "ai_reviewed",
+    "reviewer": "Codex-assisted-review",
+    "is_core": true,
+    "scoring_points": [
+      {"name": "描述真实分歧和个人责任", "keywords": ["分歧", "负责", "约束"], "weight": 30},
+      {"name": "用指标或实验推动共识", "keywords": ["指标", "样例", "实验", "共识"], "weight": 40},
+      {"name": "说明结果和复盘", "keywords": ["结果", "复盘", "改进"], "weight": 30}
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "type": "behavioral",
+    "content": "讲述一次你发现自己提交的代码或算法存在严重缺陷的经历。你采取了哪些行动？",
+    "reference_answer": "及时说明影响范围并止损，复现和定位根因，修复后补充测试、监控或评审机制，最后说明对业务的结果和个人复盘。",
+    "difficulty": 3,
+    "tags": "责任心,故障处理,复盘",
+    "topic": "责任与复盘",
+    "source": "project_team",
+    "review_status": "ai_reviewed",
+    "reviewer": "Codex-assisted-review",
+    "is_core": true,
+    "scoring_points": [
+      {"name": "主动说明影响并及时止损", "keywords": ["影响", "止损", "回滚"], "weight": 35},
+      {"name": "定位根因并完成修复验证", "keywords": ["根因", "修复", "验证"], "weight": 35},
+      {"name": "建立预防机制并复盘", "keywords": ["测试", "监控", "评审", "复盘"], "weight": 30}
+    ]
+  },
+  {
+    "position_code": "python_algorithm",
+    "type": "behavioral",
+    "content": "当交付时间很紧而实验结果仍不稳定时，你如何确定优先级并向团队同步风险？",
+    "reference_answer": "先明确最低可交付目标和不可妥协的正确性边界，按影响与验证成本排序实验，保留可回退基线；同步证据、风险和决策点，并在交付后安排补偿性工作。",
+    "difficulty": 3,
+    "tags": "优先级,风险管理,交付",
+    "topic": "执行力",
+    "source": "project_team",
+    "review_status": "ai_reviewed",
+    "reviewer": "Codex-assisted-review",
+    "is_core": true,
+    "scoring_points": [
+      {"name": "定义最低交付目标和质量边界", "keywords": ["目标", "边界", "正确性"], "weight": 35},
+      {"name": "按影响和成本安排验证优先级", "keywords": ["影响", "成本", "优先级", "基线"], "weight": 35},
+      {"name": "透明同步风险并安排后续闭环", "keywords": ["风险", "同步", "后续", "闭环"], "weight": 30}
+    ]
+  }
+]

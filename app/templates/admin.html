@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}管理后台 - AI 模拟面试与能力提升系统{% endblock %}
+{% block body_class %}page-admin{% endblock %}
+{% block extra_css %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+{% endblock %}
+{% block content %}
+  <div class="admin-wrap">
+    <aside class="admin-sidebar">
+      <div class="admin-brand">管理后台</div>
+      <nav class="admin-nav">
+        <a href="#dashboard" class="admin-nav-link active" data-view="adminDashboard">数据大屏</a>
+        <a href="#categories" class="admin-nav-link" data-view="adminCategories">岗位管理</a>
+        <a href="#questions" class="admin-nav-link" data-view="adminQuestions">题库管理</a>
+        <a href="#knowledge" class="admin-nav-link" data-view="adminKnowledge">知识库管理</a>
+        <a href="#users" class="admin-nav-link" data-view="adminUsers">用户管理</a>
+        <a href="#config" class="admin-nav-link" data-view="adminConfig">系统管理</a>
+      </nav>
+      <div class="admin-sidebar-footer">
+        <button type="button" class="admin-nav-link admin-btn-logout" id="btnAdminLogout">退出</button>
+      </div>
+    </aside>
+    <main class="admin-main">
+      {% include 'admin/dashboard.html' %}
+      {% include 'admin/categories.html' %}
+      {% include 'admin/questions.html' %}
+      {% include 'admin/knowledge.html' %}
+      {% include 'admin/users.html' %}
+      {% include 'admin/config.html' %}
+    </main>
+  </div>
+  {% include 'admin/modals.html' %}
+{% endblock %}
+{% block scripts %}
+  <script src="{{ url_for('static', filename='vendor/chart/chart.umd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+{% endblock %}

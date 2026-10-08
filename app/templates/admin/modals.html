@@ -1,0 +1,101 @@
+<div class="modal fade" id="modalPosition" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalPositionTitle">新增岗位</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div id="positionFormError" class="alert alert-danger mb-3" role="alert" style="display: none;"></div>
+        <div class="mb-3"><label class="form-label" for="positionCode">岗位编码</label><input type="text" class="form-control" id="positionCode" placeholder="如 java_backend"></div>
+        <div class="mb-3"><label class="form-label" for="positionName">名称</label><input type="text" class="form-control" id="positionName" placeholder="如 Java 后端" required></div>
+        <div class="mb-3"><label class="form-label" for="positionDescription">描述（选填）</label><input type="text" class="form-control" id="positionDescription" placeholder="岗位说明"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id="btnPositionSubmit">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalQuestion" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalQuestionTitle">新增题目</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div id="questionFormError" class="alert alert-danger mb-3" role="alert" style="display: none;"></div>
+        <div class="mb-3"><label class="form-label" for="questionContent">题目内容</label><textarea class="form-control" id="questionContent" rows="4" required></textarea></div>
+        <div class="row g-3 mb-3">
+          <div class="col-md-4"><label class="form-label" for="questionType">题目类型</label><select class="form-select" id="questionType"><option value="technical">技术知识</option><option value="project">项目经历</option><option value="scenario">场景题</option><option value="behavioral">行为题</option></select></div>
+          <div class="col-md-4"><label class="form-label" for="questionPosition">岗位</label><select class="form-select" id="questionPosition"><option value="">请选择岗位</option></select></div>
+          <div class="col-md-4"><label class="form-label" for="questionDifficulty">难度（1～5）</label><input class="form-control" id="questionDifficulty" type="number" min="1" max="5" value="2"></div>
+        </div>
+        <div class="mb-3"><label class="form-label" for="questionRefAnswer">参考答案（选填）</label><textarea class="form-control" id="questionRefAnswer" rows="2"></textarea></div>
+        <div class="row g-3 mb-3">
+          <div class="col-md-6"><label class="form-label" for="questionTopic">主题</label><input class="form-control" id="questionTopic"></div>
+          <div class="col-md-6"><label class="form-label" for="questionTags">标签（逗号分隔）</label><input class="form-control" id="questionTags"></div>
+          <div class="col-md-6"><label class="form-label" for="questionSource">来源</label><input class="form-control" id="questionSource" placeholder="如 official_doc / team_review"></div>
+          <div class="col-md-6"><label class="form-label" for="questionReviewStatus">审核状态</label><select class="form-select" id="questionReviewStatus"><option value="pending">待审核</option><option value="in_review">审核中</option><option value="reviewed">人工审核通过</option><option value="ai_reviewed">AI 辅助审核</option><option value="rejected">退回</option></select></div>
+          <div class="col-md-6"><label class="form-label" for="questionReviewer">审核人</label><input class="form-control" id="questionReviewer"></div>
+          <div class="col-md-6 d-flex align-items-end"><div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="questionIsCore"><label class="form-check-label" for="questionIsCore">核心题（优先用于面试）</label></div></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id="btnQuestionSubmit">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalKnowledge" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalKnowledgeTitle">新增知识</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div id="knowledgeFormError" class="alert alert-danger mb-3" role="alert" style="display:none;"></div>
+        <div class="row g-3">
+          <div class="col-md-8"><label class="form-label" for="knowledgeTitle">标题</label><input class="form-control" id="knowledgeTitle" required></div>
+          <div class="col-md-4"><label class="form-label" for="knowledgePosition">岗位</label><select class="form-select" id="knowledgePosition" required><option value="">请选择岗位</option></select></div>
+          <div class="col-12"><label class="form-label" for="knowledgeContent">知识内容</label><textarea class="form-control" id="knowledgeContent" rows="6" required></textarea></div>
+          <div class="col-md-6"><label class="form-label" for="knowledgeTags">标签（逗号分隔）</label><input class="form-control" id="knowledgeTags"></div>
+          <div class="col-md-6"><label class="form-label" for="knowledgeKeywords">关键词（逗号分隔）</label><input class="form-control" id="knowledgeKeywords"></div>
+          <div class="col-md-4"><label class="form-label" for="knowledgeTopic">主题</label><input class="form-control" id="knowledgeTopic"></div>
+          <div class="col-md-4"><label class="form-label" for="knowledgeSource">来源</label><input class="form-control" id="knowledgeSource" placeholder="如 official_doc / team_review"></div>
+          <div class="col-md-4"><label class="form-label" for="knowledgeDifficulty">难度（1-5）</label><input type="number" min="1" max="5" class="form-control" id="knowledgeDifficulty" value="1"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id="btnKnowledgeSubmit">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalUser" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalUserTitle">新增用户</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div id="userFormError" class="alert alert-danger mb-3" role="alert" style="display: none;"></div>
+        <div class="mb-3"><label class="form-label" for="userUsername">用户名</label><input type="text" class="form-control" id="userUsername" required></div>
+        <div class="mb-3"><label class="form-label" for="userDisplayNameInput">显示名称</label><input type="text" class="form-control" id="userDisplayNameInput" placeholder="选填"></div>
+        <div class="mb-3"><label class="form-label" for="userPassword">密码</label><input type="password" class="form-control" id="userPassword" required></div>
+        <div class="mb-3"><label class="form-label" for="userRole">角色</label><select class="form-select" id="userRole"><option value="user">普通用户</option><option value="admin">管理员</option></select></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id="btnUserSubmit">确定</button>
+      </div>
+    </div>
+  </div>
+</div>

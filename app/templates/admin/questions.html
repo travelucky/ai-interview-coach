@@ -1,0 +1,23 @@
+<section id="adminQuestions" class="view-section">
+  <h2 class="page-title">题库管理</h2>
+  <div id="questionListMsg" class="alert alert-danger mb-3" role="alert" style="display: none;"></div>
+  <div class="toolbar">
+    <div class="d-flex gap-2 flex-wrap align-items-center">
+      <select class="form-select form-select-sm" id="qFilterPosition" style="width:160px"><option value="">全部岗位</option></select>
+      <input type="text" class="form-control form-control-sm" id="qSearchKeyword" placeholder="搜索题目内容" style="width:180px" />
+      <button type="button" class="btn btn-outline-primary btn-sm" id="btnReloadQuestions">查询</button>
+      <button type="button" class="btn btn-outline-secondary btn-sm" id="btnResetQuestionsFilter">重置筛选</button>
+      <button type="button" class="btn btn-outline-danger btn-sm" id="btnClearQuestionBank">停用全部题目</button>
+    </div>
+    <button type="button" class="btn btn-primary" id="btnAddQuestion">新增题目</button>
+  </div>
+  <div class="table-wrap">
+    <table class="table">
+      <thead>
+        <tr><th>题目内容</th><th>类型 / 难度</th><th>岗位</th><th>审核</th><th width="140">操作</th></tr>
+      </thead>
+      <tbody id="questionTbody"></tbody>
+    </table>
+  </div>
+  <nav class="d-flex justify-content-center"><ul class="pagination pagination-sm" id="questionPagination"></ul></nav>
+</section>

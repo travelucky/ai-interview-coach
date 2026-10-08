@@ -1,0 +1,21 @@
+<section id="userProfile" class="view-section">
+  <h2 class="page-title">个人中心</h2>
+  <div class="profile-area">
+    <div id="profileSaveError" class="alert alert-danger mb-3" role="alert" style="display: none;"></div>
+    <div class="profile-form-wrap">
+      <label class="form-label" for="profileDisplayName">显示名称</label>
+      <input type="text" class="form-control mb-3" id="profileDisplayName" placeholder="昵称">
+      <label class="form-label" for="profilePassword">新密码</label>
+      <input type="password" class="form-control mb-3" id="profilePassword" placeholder="不修改请留空">
+      <button type="button" class="btn btn-primary btn-lg" id="btnSaveProfile">保存</button>
+    </div>
+    <div class="profile-form-wrap mt-4">
+      <h3 class="h6">个人数据与隐私</h3>
+      <p class="text-muted small">可导出本人账号、面试、评分、表达指标和训练记录；导出内容不含密码、登录会话或服务密钥。</p>
+      <button type="button" class="btn btn-outline-primary mb-3" id="btnExportPersonalData">导出我的数据</button>
+      <label class="form-label" for="deleteAccountPassword">删除账号（请输入当前密码）</label>
+      <input type="password" class="form-control mb-2" id="deleteAccountPassword" autocomplete="current-password" placeholder="当前密码">
+      <button type="button" class="btn btn-outline-danger" id="btnDeleteOwnAccount">永久删除账号及面试数据</button>
+    </div>
+  </div>
+</section>
