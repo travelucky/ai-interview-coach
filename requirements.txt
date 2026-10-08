@@ -4,6 +4,6 @@ SQLAlchemy==2.0.48
 Werkzeug==3.1.9
 python-dotenv==1.2.2
 requests==2.33.0
-websocket-client==1.9.0
+websocket-client==1.9.2
 pytest==9.0.3
 pypdf==6.19.0
